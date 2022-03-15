@@ -19,10 +19,22 @@ namespace OnlineShop
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            sideBar.Size = new Size(234, 450);
+            //sideBar.Size = new Size(234, 450);
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            //sideBar.Size = new Size(72, 450);
+        }
+
+        //Sidebar TO DO
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            sideBar.Size = new Size(234, 450);
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
             sideBar.Size = new Size(72, 450);
         }

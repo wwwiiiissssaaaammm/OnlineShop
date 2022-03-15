@@ -16,6 +16,7 @@ namespace OnlineShop
     public partial class LoginForm : Form
 
     {
+                                    // {------------ Open Connection ------------}
         MySqlConnection conn = new MySqlConnection("SERVER=localhost; UID=root; PASSWORD='';");
         int i;
         int j;
@@ -26,8 +27,10 @@ namespace OnlineShop
             InitializeComponent();
         }
 
+                                    // {------------ Check for Admin or Customer From Database ------------}
         private void btnAnmelden_Click(object sender, EventArgs e)
-        {
+        {   
+                                    // {------------  Customer Check ------------}
             i = 0;
             conn.Open();
             MySqlCommand cmd = conn.CreateCommand();
@@ -48,8 +51,8 @@ namespace OnlineShop
                 form.ShowDialog();
             }
             conn.Close();
-            ///////////////////////////////////////////////////////////////////////////////////////
 
+                                     // {------------ Admin Check ------------}
             j = 0;
             conn.Open();
             MySqlCommand command = conn.CreateCommand();
@@ -59,6 +62,7 @@ namespace OnlineShop
             MySqlDataAdapter adapter = new MySqlDataAdapter(command);
             adapter.Fill(tbl);
             j = Convert.ToInt32(tbl.Rows.Count.ToString());
+
             if (j == 0)
             {
                 tberror.Visible = true;
@@ -73,12 +77,16 @@ namespace OnlineShop
             conn.Close();
         }
 
+                                     // {------------ Redirect To the Sign up Site ------------}
+
         private void btnErstellen_Click(object sender, EventArgs e)
         {
             this.Hide();
             NeuesKontoForm form = new NeuesKontoForm();
             form.ShowDialog();
         }
+
+                                    // {------------ Hide and Show Password ------------}
 
         private void cbAnzeigen_CheckedChanged(object sender, EventArgs e)
         {
@@ -91,5 +99,7 @@ namespace OnlineShop
                 tbPasswort.UseSystemPasswordChar = true;
             }
         }
+
+        
     }
 }
