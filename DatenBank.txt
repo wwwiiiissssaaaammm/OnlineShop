@@ -1,0 +1,43 @@
+create database OnlineShop;
+use OnlineShop;
+create table kunde(
+Kunde_ID int(100) not null auto_increment primary key,
+vorname varchar(100) not null ,
+nachname varchar(100)not null,
+email varchar(100)not null,
+ort varchar(50)not null,
+strasse varchar(50)not null,
+Hausnummer varchar(10)not null,
+plz varchar(10)not null,
+Telefonnummer int(50)not null,
+Passwort varchar(50)not null,
+unique (email),
+ist_Admin boolean not null default false
+
+);
+create table Kategorie(
+Kategorie_id int(100) not null auto_increment primary key,
+Bezeichnung varchar(100)
+
+);
+
+create table Produkte(
+Produkt_id int(100) not null auto_increment primary key,
+Kategorie_id int(100),
+FOREIGN KEY (Kategorie_id) REFERENCES Kategorie(Kategorie_id),
+ Bezeichnung varchar(100),
+ Beschreibung text,
+ Preis varchar(100),
+ Foto blob
+ );
+ 
+ create table Kunde_Produkte(
+ Kunde_id int(100),
+ Produkte_id int(100),
+ foreign key (Kunde_id) references kunde(Kunde_ID),
+ foreign key (Produkte_id) references Produkte(Produkt_id),
+ Menge int(100),
+ preis varchar(100),
+ Datum varchar(100)
+ 
+ );

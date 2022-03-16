@@ -33,19 +33,19 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.tbGeraete = new System.Windows.Forms.Button();
             this.tbMoebel = new System.Windows.Forms.Button();
             this.tbKleidung = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.tbAbmelden = new System.Windows.Forms.Button();
             this.sideBar.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // sideBar
@@ -60,7 +60,7 @@
             this.sideBar.MaximumSize = new System.Drawing.Size(234, 450);
             this.sideBar.MinimumSize = new System.Drawing.Size(72, 450);
             this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(72, 450);
+            this.sideBar.Size = new System.Drawing.Size(234, 450);
             this.sideBar.TabIndex = 1;
             // 
             // panel2
@@ -96,6 +96,24 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Menü";
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.tbGeraete);
+            this.panel3.Controls.Add(this.tbMoebel);
+            this.panel3.Controls.Add(this.tbKleidung);
+            this.panel3.Location = new System.Drawing.Point(3, 149);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(229, 186);
+            this.panel3.TabIndex = 4;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.tbAbmelden);
+            this.panel4.Location = new System.Drawing.Point(3, 341);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(229, 109);
+            this.panel4.TabIndex = 5;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -126,16 +144,6 @@
             this.button2.Text = "               Meine Daten";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.tbGeraete);
-            this.panel3.Controls.Add(this.tbMoebel);
-            this.panel3.Controls.Add(this.tbKleidung);
-            this.panel3.Location = new System.Drawing.Point(3, 149);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(229, 186);
-            this.panel3.TabIndex = 4;
             // 
             // tbGeraete
             // 
@@ -185,14 +193,6 @@
             this.tbKleidung.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbKleidung.UseVisualStyleBackColor = false;
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.tbAbmelden);
-            this.panel4.Location = new System.Drawing.Point(3, 341);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(229, 109);
-            this.panel4.TabIndex = 5;
-            // 
             // tbAbmelden
             // 
             this.tbAbmelden.BackColor = System.Drawing.Color.LightGray;
@@ -220,9 +220,9 @@
             this.sideBar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
