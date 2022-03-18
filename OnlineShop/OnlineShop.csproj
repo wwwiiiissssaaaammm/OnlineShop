@@ -95,8 +95,50 @@
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminStartSeite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminStartSeite.Designer.cs">
+      <DependentUpon>AdminStartSeite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bestellungen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bestellungen.Designer.cs">
+      <DependentUpon>Bestellungen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeraetsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeraetsForm.Designer.cs">
+      <DependentUpon>GeraetsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kategorie.cs" />
     <Compile Include="Datenbank.cs" />
+    <Compile Include="KleidungsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KleidungsForm.Designer.cs">
+      <DependentUpon>KleidungsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kundenDatenA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kundenDatenA.Designer.cs">
+      <DependentUpon>kundenDatenA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KundenDatenK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KundenDatenK.Designer.cs">
+      <DependentUpon>KundenDatenK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoebelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoebelForm.Designer.cs">
+      <DependentUpon>MoebelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="NeuesKontoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,8 +162,23 @@
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminStartSeite.resx">
+      <DependentUpon>AdminStartSeite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeraetsForm.resx">
+      <DependentUpon>GeraetsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KleidungsForm.resx">
+      <DependentUpon>KleidungsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KundenDatenK.resx">
+      <DependentUpon>KundenDatenK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoebelForm.resx">
+      <DependentUpon>MoebelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NeuesKontoForm.resx">
       <DependentUpon>NeuesKontoForm.cs</DependentUpon>

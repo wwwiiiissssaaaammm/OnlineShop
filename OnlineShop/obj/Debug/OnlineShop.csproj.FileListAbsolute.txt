@@ -107,3 +107,8 @@ C:\Users\tn\Downloads\csharp\Projekte\Download Projekt\OnlineShop\OnlineShop\obj
 C:\Users\tn\Downloads\csharp\Projekte\Download Projekt\OnlineShop\OnlineShop\obj\Debug\OnlineShop.exe
 C:\Users\tn\Downloads\csharp\Projekte\Download Projekt\OnlineShop\OnlineShop\obj\Debug\OnlineShop.pdb
 C:\Users\tn\Downloads\csharp\Projekte\Download Projekt\OnlineShop\OnlineShop\obj\Debug\OnlineShop.AdminForm.resources
+C:\Users\tn\Downloads\csharp\Projekte\Download Projekt\OnlineShop\OnlineShop\obj\Debug\OnlineShop.AdminStartSeite.resources
+C:\Users\tn\Downloads\csharp\Projekte\Download Projekt\OnlineShop\OnlineShop\obj\Debug\OnlineShop.GeraetsForm.resources
+C:\Users\tn\Downloads\csharp\Projekte\Download Projekt\OnlineShop\OnlineShop\obj\Debug\OnlineShop.MoebelForm.resources
+C:\Users\tn\Downloads\csharp\Projekte\Download Projekt\OnlineShop\OnlineShop\obj\Debug\OnlineShop.KleidungsForm.resources
+C:\Users\tn\Downloads\csharp\Projekte\Download Projekt\OnlineShop\OnlineShop\obj\Debug\OnlineShop.KundenDatenK.resources

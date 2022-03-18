@@ -21,7 +21,7 @@ namespace OnlineShop
 
         {
             InitializeComponent();
-            Filldgv();
+            Filldgv(tbSuche.Text);
             anzeigen();
         }
 
@@ -98,7 +98,7 @@ namespace OnlineShop
                 cmd.Parameters.Add("@kat_ID", MySqlDbType.Int32, 100);
                 cmd.Parameters.Add("@bez", MySqlDbType.VarChar, 100);
                 cmd.Parameters.Add("@Bes", MySqlDbType.VarChar, 100);
-                cmd.Parameters.Add("@preis", MySqlDbType.VarChar, 100);
+                cmd.Parameters.Add("@preis", MySqlDbType.Double);
                 cmd.Parameters.Add("@img", MySqlDbType.Blob);
 
                 cmd.Parameters["@kat_ID"].Value = lsKategorie [cbKategorie.SelectedIndex].KatId;
@@ -128,11 +128,11 @@ namespace OnlineShop
             }
         }
 
-        private void Filldgv()
+        private void Filldgv(string suchwert)
         {
 
 
-            MySqlCommand cmd = new MySqlCommand("select produkte.Produkt_id, produkte.Bezeichnung as'Produkt_Name', kategorie.Bezeichnung,  produkte.Beschreibung, produkte.Preis, produkte.Foto  from produkte left join kategorie on kategorie.Kategorie_id = produkte.Kategorie_id;", conn);
+            MySqlCommand cmd = new MySqlCommand("select produkte.Produkt_id, produkte.Bezeichnung as'Produkt_Name', kategorie.Bezeichnung,  produkte.Beschreibung, produkte.Preis, produkte.Foto  from produkte left join kategorie on kategorie.Kategorie_id = produkte.Kategorie_id where produkte.Bezeichnung like '%"+tbSuche.Text+"%' ; ", conn);
 
             MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
 
@@ -203,7 +203,7 @@ namespace OnlineShop
                 cmd.Parameters.Add("@kat_ID", MySqlDbType.Int32, 100);
                 cmd.Parameters.Add("@bez", MySqlDbType.VarChar, 100);
                 cmd.Parameters.Add("@Bes", MySqlDbType.VarChar, 100);
-                cmd.Parameters.Add("@preis", MySqlDbType.VarChar, 100);
+                cmd.Parameters.Add("@preis", MySqlDbType.Double);
                 cmd.Parameters.Add("@img", MySqlDbType.Blob);
 
                 cmd.Parameters["@kat_ID"].Value = lsKategorie[cbKategorie.SelectedIndex].KatId;
@@ -233,6 +233,10 @@ namespace OnlineShop
             picBild.Image = null;
         }
 
+        private void tbSuche_TextChanged(object sender, EventArgs e)
+        {
+            Filldgv(tbSuche.Text);
 
+        }
     }
 }

@@ -40,14 +40,17 @@ namespace OnlineShop
             MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
             ad.Fill(dataTable);
             i = Convert.ToInt32(dataTable.Rows.Count.ToString());
+            
             if (i == 0)
             {
                 tberror.Visible = true;
             }
             else
             {
+                
+                int kundeId = Convert.ToInt32( dataTable.Rows[0][0].ToString());
                 this.Hide();
-                StartSeiteK form = new StartSeiteK();
+                StartSeiteK form = new StartSeiteK(kundeId);
                 form.ShowDialog();
             }
             conn.Close();
@@ -70,7 +73,7 @@ namespace OnlineShop
             else
             {
                 this.Hide();
-                AdminForm form = new AdminForm();
+                AdminStartSeite form = new AdminStartSeite();
                 form.ShowDialog();
             }
 

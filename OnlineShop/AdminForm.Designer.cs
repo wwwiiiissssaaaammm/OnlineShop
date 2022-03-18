@@ -46,6 +46,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tbID = new System.Windows.Forms.TextBox();
             this.btn_Datenleeren = new System.Windows.Forms.Button();
+            this.tbSuche = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdukte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBild)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +55,7 @@
             // dgvProdukte
             // 
             this.dgvProdukte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProdukte.Location = new System.Drawing.Point(12, 20);
+            this.dgvProdukte.Location = new System.Drawing.Point(12, 57);
             this.dgvProdukte.Name = "dgvProdukte";
             this.dgvProdukte.Size = new System.Drawing.Size(711, 328);
             this.dgvProdukte.TabIndex = 0;
@@ -220,11 +222,32 @@
             this.btn_Datenleeren.UseVisualStyleBackColor = true;
             this.btn_Datenleeren.Click += new System.EventHandler(this.btn_Datenleeren_Click);
             // 
+            // tbSuche
+            // 
+            this.tbSuche.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSuche.Location = new System.Drawing.Point(73, 27);
+            this.tbSuche.Name = "tbSuche";
+            this.tbSuche.Size = new System.Drawing.Size(650, 24);
+            this.tbSuche.TabIndex = 20;
+            this.tbSuche.TextChanged += new System.EventHandler(this.tbSuche_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(9, 30);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 18);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Suchen";
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1113, 518);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.tbSuche);
             this.Controls.Add(this.btn_Datenleeren);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbID);
@@ -272,5 +295,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbID;
         private System.Windows.Forms.Button btn_Datenleeren;
+        private System.Windows.Forms.TextBox tbSuche;
+        private System.Windows.Forms.Label label6;
     }
 }

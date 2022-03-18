@@ -35,8 +35,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dgvAlleProdukte = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnMeineDaten = new System.Windows.Forms.Button();
             this.tbGeraete = new System.Windows.Forms.Button();
             this.tbMoebel = new System.Windows.Forms.Button();
             this.tbKleidung = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlleProdukte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +54,7 @@
             // 
             this.sideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.sideBar.Controls.Add(this.panel2);
-            this.sideBar.Controls.Add(this.button2);
+            this.sideBar.Controls.Add(this.btnMeineDaten);
             this.sideBar.Controls.Add(this.panel3);
             this.sideBar.Controls.Add(this.panel4);
             this.sideBar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -60,7 +62,7 @@
             this.sideBar.MaximumSize = new System.Drawing.Size(234, 450);
             this.sideBar.MinimumSize = new System.Drawing.Size(72, 450);
             this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(234, 450);
+            this.sideBar.Size = new System.Drawing.Size(232, 450);
             this.sideBar.TabIndex = 1;
             // 
             // panel2
@@ -114,6 +116,14 @@
             this.panel4.Size = new System.Drawing.Size(229, 109);
             this.panel4.TabIndex = 5;
             // 
+            // dgvAlleProdukte
+            // 
+            this.dgvAlleProdukte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlleProdukte.Location = new System.Drawing.Point(238, 42);
+            this.dgvAlleProdukte.Name = "dgvAlleProdukte";
+            this.dgvAlleProdukte.Size = new System.Drawing.Size(575, 293);
+            this.dgvAlleProdukte.TabIndex = 2;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -126,24 +136,23 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
-            // button2
+            // btnMeineDaten
             // 
-            this.button2.BackColor = System.Drawing.Color.LightGray;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(3, 108);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(229, 35);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "               Meine Daten";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnMeineDaten.BackColor = System.Drawing.Color.LightGray;
+            this.btnMeineDaten.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMeineDaten.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMeineDaten.Image = ((System.Drawing.Image)(resources.GetObject("btnMeineDaten.Image")));
+            this.btnMeineDaten.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMeineDaten.Location = new System.Drawing.Point(3, 108);
+            this.btnMeineDaten.Name = "btnMeineDaten";
+            this.btnMeineDaten.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnMeineDaten.Size = new System.Drawing.Size(229, 35);
+            this.btnMeineDaten.TabIndex = 1;
+            this.btnMeineDaten.Text = "               Meine Daten";
+            this.btnMeineDaten.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMeineDaten.UseVisualStyleBackColor = false;
+            this.btnMeineDaten.Click += new System.EventHandler(this.btnMeineDaten_Click);
             // 
             // tbGeraete
             // 
@@ -160,6 +169,7 @@
             this.tbGeraete.Text = "               Geräte";
             this.tbGeraete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbGeraete.UseVisualStyleBackColor = false;
+            this.tbGeraete.Click += new System.EventHandler(this.tbGeraete_Click);
             // 
             // tbMoebel
             // 
@@ -176,6 +186,7 @@
             this.tbMoebel.Text = "               Möbel";
             this.tbMoebel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbMoebel.UseVisualStyleBackColor = false;
+            this.tbMoebel.Click += new System.EventHandler(this.tbMoebel_Click);
             // 
             // tbKleidung
             // 
@@ -184,7 +195,7 @@
             this.tbKleidung.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tbKleidung.Image = ((System.Drawing.Image)(resources.GetObject("tbKleidung.Image")));
             this.tbKleidung.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbKleidung.Location = new System.Drawing.Point(3, 148);
+            this.tbKleidung.Location = new System.Drawing.Point(0, 148);
             this.tbKleidung.Name = "tbKleidung";
             this.tbKleidung.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.tbKleidung.Size = new System.Drawing.Size(229, 35);
@@ -192,6 +203,7 @@
             this.tbKleidung.Text = "               Kleidung";
             this.tbKleidung.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbKleidung.UseVisualStyleBackColor = false;
+            this.tbKleidung.Click += new System.EventHandler(this.tbKleidung_Click);
             // 
             // tbAbmelden
             // 
@@ -213,7 +225,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(842, 450);
+            this.Controls.Add(this.dgvAlleProdukte);
             this.Controls.Add(this.sideBar);
             this.Name = "StartSeiteK";
             this.Text = "Form1";
@@ -222,6 +235,7 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlleProdukte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -234,12 +248,13 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnMeineDaten;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button tbGeraete;
         private System.Windows.Forms.Button tbMoebel;
         private System.Windows.Forms.Button tbKleidung;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button tbAbmelden;
+        private System.Windows.Forms.DataGridView dgvAlleProdukte;
     }
 }
