@@ -108,9 +108,20 @@ namespace OnlineShop
 
         private void btnSpeichern_Click(object sender, EventArgs e)
         {
-            string update;
-            update = "update OnlineShop.kunde set vorname = '" + tbVorname.Text + "', nachname = '" + tbNachname.Text + "', email = '" + tbEmail.Text + "', strasse = '" + tbStr.Text + "', Hausnummer = '" + tbHnr.Text + "', plz = '" + tbPlz.Text + "', Telefonnummer = '" + tbTel.Text + "' where Kunde_ID = '" + tbId.Text + "'";
-            excutequery(update);
+            DialogResult dr;
+            dr = MessageBox.Show("Möchten Sie wirklichihre Daten ändern","", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                string update;
+                update = "update OnlineShop.kunde set vorname = '" + tbVorname.Text + "', nachname = '" + tbNachname.Text + "', email = '" + tbEmail.Text + "', strasse = '" + tbStr.Text + "', Hausnummer = '" + tbHnr.Text + "', plz = '" + tbPlz.Text + "', Telefonnummer = '" + tbTel.Text + "' where Kunde_ID = '" + tbId.Text + "'";
+                excutequery(update);
+                this.Hide();
+                KundenDatenK kundenDatenK = new KundenDatenK(kundenid);
+                kundenDatenK.ShowDialog();
+            }
+            
+            
+            
           
         }
     }

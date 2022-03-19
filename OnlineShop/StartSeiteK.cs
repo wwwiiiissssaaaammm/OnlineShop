@@ -62,5 +62,18 @@ namespace OnlineShop
             KundenDatenK kundenDaten = new KundenDatenK(kundenid);
             kundenDaten.ShowDialog();
         }
+
+        private void tbAbmelden_Click(object sender, EventArgs e)
+        {
+            DialogResult dr;
+            dr = MessageBox.Show("Möchten Sie wirklich abmelden", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+
+                this.Hide();
+                LoginForm form = new LoginForm();
+                form.ShowDialog();
+            }
+        }
     }
 }

@@ -48,7 +48,7 @@ namespace OnlineShop
             else
             {
                 
-                int kundeId = Convert.ToInt32( dataTable.Rows[0][0].ToString());
+                int kundeId = Convert.ToInt32(dataTable.Rows[0][0].ToString());
                 this.Hide();
                 StartSeiteK form = new StartSeiteK(kundeId);
                 form.ShowDialog();

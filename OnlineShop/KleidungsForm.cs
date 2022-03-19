@@ -19,12 +19,12 @@ namespace OnlineShop
         {
             InitializeComponent();
             this.kundenid = kundenid;
-            FillDgv();
+            FillDgv(tbSuche.Text);
         }
 
-        public void FillDgv()
+        public void FillDgv(string suchwert)
         {
-            MySqlCommand cmd = new MySqlCommand("select Produkt_id ,Bezeichnung, Beschreibung, Preis , Foto from produkte where Kategorie_id = 2 ;", conn);
+            MySqlCommand cmd = new MySqlCommand("select Produkt_id ,Bezeichnung, Beschreibung, Preis , Foto from produkte where Kategorie_id = 2 and Bezeichnung like '%"+tbSuche.Text+"%' ;", conn);
 
             MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
 
@@ -56,7 +56,7 @@ namespace OnlineShop
             else if (dgvKleidung.SelectedRows.Count == 0)
             {
 
-                MessageBox.Show("Bitte ein Produkt auswählen");
+                MessageBox.Show("Bitte ein Produkt auswählen", "", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading, "help.pdf");
             }
             else
             {
@@ -92,6 +92,74 @@ namespace OnlineShop
                 conn.Close();
 
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            sideBar.Size = new Size(234, 450);
+            dgvKleidung.Size = new Size(629, 363);
+            dgvKleidung.Location = new Point(312, 43);
+            lbSuche.Location = new Point(238, 13);
+            tbSuche.Location = new Point(307, 10);
+            tbSuche.Size = new Size(634, 24);
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            sideBar.Size = new Size(72, 450);
+            dgvKleidung.Size = new Size(791, 363);
+            dgvKleidung.Location = new Point(93, 43);
+            lbSuche.Location = new Point(90, 13);
+            tbSuche.Location = new Point(154, 10);
+            tbSuche.Size = new Size(787, 24); 
+        }
+
+        private void tbGeraete_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GeraetsForm geraets = new GeraetsForm(kundenid);
+            geraets.ShowDialog();
+        }
+
+        private void tbMoebel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MoebelForm form = new MoebelForm(kundenid);
+            form.ShowDialog();
+        }
+
+        private void tbKleidung_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            KleidungsForm form = new KleidungsForm(kundenid);
+            form.ShowDialog();
+        }
+
+        private void tbAbmelden_Click(object sender, EventArgs e)
+        {
+            DialogResult dr;
+            dr = MessageBox.Show("Möchten Sie wirklich abmelden", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+
+                this.Hide();
+                LoginForm form = new LoginForm();
+                form.ShowDialog();
+            }
+        }
+
+        private void btnMeineDaten_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            KundenDatenK kundenDaten = new KundenDatenK(kundenid);
+            kundenDaten.ShowDialog();
+        }
+
+        private void tbSuche_TextChanged(object sender, EventArgs e)
+        {
+            FillDgv(tbSuche.Text);
+
         }
     }
 }
