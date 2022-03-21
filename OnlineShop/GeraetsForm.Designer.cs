@@ -46,33 +46,34 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.tbsuche = new System.Windows.Forms.TextBox();
+            this.lbSuche = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnMeineDaten = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.tbGeraete = new System.Windows.Forms.Button();
             this.tbMoebel = new System.Windows.Forms.Button();
             this.tbKleidung = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.tbAbmelden = new System.Windows.Forms.Button();
-            this.tbsuche = new System.Windows.Forms.TextBox();
-            this.lbSuche = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGeraete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countMenge)).BeginInit();
             this.sideBar.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvGeraete
             // 
             this.dgvGeraete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGeraete.Location = new System.Drawing.Point(78, 42);
+            this.dgvGeraete.Location = new System.Drawing.Point(238, 42);
             this.dgvGeraete.MaximumSize = new System.Drawing.Size(812, 363);
             this.dgvGeraete.MinimumSize = new System.Drawing.Size(651, 363);
             this.dgvGeraete.Name = "dgvGeraete";
-            this.dgvGeraete.Size = new System.Drawing.Size(811, 363);
+            this.dgvGeraete.Size = new System.Drawing.Size(651, 363);
             this.dgvGeraete.TabIndex = 0;
             this.dgvGeraete.SelectionChanged += new System.EventHandler(this.dgvGeraete_SelectionChanged);
             // 
@@ -172,7 +173,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(239, 427);
+            this.button1.Location = new System.Drawing.Point(652, 427);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 23);
             this.button1.TabIndex = 17;
@@ -202,7 +203,7 @@
             this.sideBar.MaximumSize = new System.Drawing.Size(234, 450);
             this.sideBar.MinimumSize = new System.Drawing.Size(72, 450);
             this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(72, 450);
+            this.sideBar.Size = new System.Drawing.Size(234, 450);
             this.sideBar.TabIndex = 47;
             // 
             // panel2
@@ -238,6 +239,44 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Menü";
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.tbGeraete);
+            this.panel3.Controls.Add(this.tbMoebel);
+            this.panel3.Controls.Add(this.tbKleidung);
+            this.panel3.Location = new System.Drawing.Point(3, 149);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(229, 186);
+            this.panel3.TabIndex = 4;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.tbAbmelden);
+            this.panel4.Location = new System.Drawing.Point(3, 341);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(229, 109);
+            this.panel4.TabIndex = 5;
+            // 
+            // tbsuche
+            // 
+            this.tbsuche.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbsuche.Location = new System.Drawing.Point(238, 12);
+            this.tbsuche.Name = "tbsuche";
+            this.tbsuche.Size = new System.Drawing.Size(652, 24);
+            this.tbsuche.TabIndex = 48;
+            this.tbsuche.TextChanged += new System.EventHandler(this.tbsuche_TextChanged);
+            // 
+            // lbSuche
+            // 
+            this.lbSuche.AutoSize = true;
+            this.lbSuche.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSuche.Location = new System.Drawing.Point(176, 15);
+            this.lbSuche.Name = "lbSuche";
+            this.lbSuche.Size = new System.Drawing.Size(56, 18);
+            this.lbSuche.TabIndex = 49;
+            this.lbSuche.Text = "suchen";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -267,16 +306,6 @@
             this.btnMeineDaten.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMeineDaten.UseVisualStyleBackColor = false;
             this.btnMeineDaten.Click += new System.EventHandler(this.btnMeineDaten_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.tbGeraete);
-            this.panel3.Controls.Add(this.tbMoebel);
-            this.panel3.Controls.Add(this.tbKleidung);
-            this.panel3.Location = new System.Drawing.Point(3, 149);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(229, 186);
-            this.panel3.TabIndex = 4;
             // 
             // tbGeraete
             // 
@@ -329,14 +358,6 @@
             this.tbKleidung.UseVisualStyleBackColor = false;
             this.tbKleidung.Click += new System.EventHandler(this.tbKleidung_Click);
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.tbAbmelden);
-            this.panel4.Location = new System.Drawing.Point(3, 341);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(229, 109);
-            this.panel4.TabIndex = 5;
-            // 
             // tbAbmelden
             // 
             this.tbAbmelden.BackColor = System.Drawing.Color.LightGray;
@@ -354,24 +375,22 @@
             this.tbAbmelden.UseVisualStyleBackColor = false;
             this.tbAbmelden.Click += new System.EventHandler(this.tbAbmelden_Click);
             // 
-            // tbsuche
+            // button4
             // 
-            this.tbsuche.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbsuche.Location = new System.Drawing.Point(146, 12);
-            this.tbsuche.Name = "tbsuche";
-            this.tbsuche.Size = new System.Drawing.Size(744, 24);
-            this.tbsuche.TabIndex = 48;
-            this.tbsuche.TextChanged += new System.EventHandler(this.tbsuche_TextChanged);
-            // 
-            // lbSuche
-            // 
-            this.lbSuche.AutoSize = true;
-            this.lbSuche.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSuche.Location = new System.Drawing.Point(84, 15);
-            this.lbSuche.Name = "lbSuche";
-            this.lbSuche.Size = new System.Drawing.Size(56, 18);
-            this.lbSuche.TabIndex = 49;
-            this.lbSuche.Text = "suchen";
+            this.button4.BackColor = System.Drawing.Color.LightGray;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(0, 28);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(229, 35);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "               Warenkorb";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // GeraetsForm
             // 
@@ -404,9 +423,9 @@
             this.sideBar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,5 +460,6 @@
         private System.Windows.Forms.Button tbAbmelden;
         private System.Windows.Forms.TextBox tbsuche;
         private System.Windows.Forms.Label lbSuche;
+        private System.Windows.Forms.Button button4;
     }
 }

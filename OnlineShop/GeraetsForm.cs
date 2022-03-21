@@ -51,7 +51,9 @@ namespace OnlineShop
 
         private void button1_Click(object sender, EventArgs e)
         {
-          
+            this.Hide();
+            WarenKorb warenKorb = new WarenKorb(kundenid);
+            warenKorb.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -178,6 +180,13 @@ namespace OnlineShop
         {
             FillDgv(tbsuche.Text);
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            WarenKorb waren = new WarenKorb(kundenid);
+            waren.ShowDialog();
         }
     }
 }

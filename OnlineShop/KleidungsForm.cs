@@ -161,5 +161,30 @@ namespace OnlineShop
             FillDgv(tbSuche.Text);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            WarenKorb warenKorb = new WarenKorb(kundenid);
+            warenKorb.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            WarenKorb waren = new WarenKorb(kundenid);
+            waren.ShowDialog();
+        }
+
+        private void dgvKleidung_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvKleidung.CurrentCell != null)
+            {
+                tbProduktName.Text = dgvKleidung.CurrentRow.Cells[1].Value.ToString();
+                tbBeschreibung.Text = dgvKleidung.CurrentRow.Cells[2].Value.ToString();
+                tbPreis.Text = dgvKleidung.CurrentRow.Cells[3].Value.ToString();
+
+            }
+        }
     }
 }

@@ -75,5 +75,12 @@ namespace OnlineShop
                 form.ShowDialog();
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            WarenKorb waren = new WarenKorb(kundenid);
+            waren.ShowDialog();
+        }
     }
 }

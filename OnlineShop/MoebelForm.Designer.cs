@@ -46,23 +46,24 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.tbSuche = new System.Windows.Forms.TextBox();
+            this.lbSuche = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnMeineDaten = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.tbGeraete = new System.Windows.Forms.Button();
             this.tbMoebel = new System.Windows.Forms.Button();
             this.tbKleidung = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.tbAbmelden = new System.Windows.Forms.Button();
-            this.tbSuche = new System.Windows.Forms.TextBox();
-            this.lbSuche = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.countMenge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMoebel)).BeginInit();
             this.sideBar.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -77,12 +78,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1198, 427);
+            this.button1.Location = new System.Drawing.Point(1269, 424);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 23);
             this.button1.TabIndex = 30;
             this.button1.Text = "Warenkorb";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -190,7 +192,7 @@
             this.dgvMoebel.MinimumSize = new System.Drawing.Size(651, 363);
             this.dgvMoebel.Name = "dgvMoebel";
             this.dgvMoebel.ReadOnly = true;
-            this.dgvMoebel.Size = new System.Drawing.Size(811, 363);
+            this.dgvMoebel.Size = new System.Drawing.Size(814, 363);
             this.dgvMoebel.TabIndex = 19;
             this.dgvMoebel.SelectionChanged += new System.EventHandler(this.dgvGeraete_SelectionChanged);
             // 
@@ -242,6 +244,44 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Menü";
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.tbGeraete);
+            this.panel3.Controls.Add(this.tbMoebel);
+            this.panel3.Controls.Add(this.tbKleidung);
+            this.panel3.Location = new System.Drawing.Point(3, 149);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(229, 186);
+            this.panel3.TabIndex = 4;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.tbAbmelden);
+            this.panel4.Location = new System.Drawing.Point(3, 341);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(229, 109);
+            this.panel4.TabIndex = 5;
+            // 
+            // tbSuche
+            // 
+            this.tbSuche.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSuche.Location = new System.Drawing.Point(304, 12);
+            this.tbSuche.Name = "tbSuche";
+            this.tbSuche.Size = new System.Drawing.Size(750, 24);
+            this.tbSuche.TabIndex = 47;
+            this.tbSuche.TextChanged += new System.EventHandler(this.tbSuche_TextChanged);
+            // 
+            // lbSuche
+            // 
+            this.lbSuche.AutoSize = true;
+            this.lbSuche.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSuche.Location = new System.Drawing.Point(240, 15);
+            this.lbSuche.Name = "lbSuche";
+            this.lbSuche.Size = new System.Drawing.Size(58, 18);
+            this.lbSuche.TabIndex = 48;
+            this.lbSuche.Text = "Suchen";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -271,16 +311,6 @@
             this.btnMeineDaten.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMeineDaten.UseVisualStyleBackColor = false;
             this.btnMeineDaten.Click += new System.EventHandler(this.btnMeineDaten_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.tbGeraete);
-            this.panel3.Controls.Add(this.tbMoebel);
-            this.panel3.Controls.Add(this.tbKleidung);
-            this.panel3.Location = new System.Drawing.Point(3, 149);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(229, 186);
-            this.panel3.TabIndex = 4;
             // 
             // tbGeraete
             // 
@@ -333,14 +363,6 @@
             this.tbKleidung.UseVisualStyleBackColor = false;
             this.tbKleidung.Click += new System.EventHandler(this.tbKleidung_Click);
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.tbAbmelden);
-            this.panel4.Location = new System.Drawing.Point(3, 341);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(229, 109);
-            this.panel4.TabIndex = 5;
-            // 
             // tbAbmelden
             // 
             this.tbAbmelden.BackColor = System.Drawing.Color.LightGray;
@@ -358,24 +380,22 @@
             this.tbAbmelden.UseVisualStyleBackColor = false;
             this.tbAbmelden.Click += new System.EventHandler(this.tbAbmelden_Click);
             // 
-            // tbSuche
+            // button4
             // 
-            this.tbSuche.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSuche.Location = new System.Drawing.Point(304, 12);
-            this.tbSuche.Name = "tbSuche";
-            this.tbSuche.Size = new System.Drawing.Size(750, 24);
-            this.tbSuche.TabIndex = 47;
-            this.tbSuche.TextChanged += new System.EventHandler(this.tbSuche_TextChanged);
-            // 
-            // lbSuche
-            // 
-            this.lbSuche.AutoSize = true;
-            this.lbSuche.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSuche.Location = new System.Drawing.Point(240, 15);
-            this.lbSuche.Name = "lbSuche";
-            this.lbSuche.Size = new System.Drawing.Size(58, 18);
-            this.lbSuche.TabIndex = 48;
-            this.lbSuche.Text = "Suchen";
+            this.button4.BackColor = System.Drawing.Color.LightGray;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(0, 22);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(229, 35);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "               Warenkorb";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // MoebelForm
             // 
@@ -408,9 +428,9 @@
             this.sideBar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -445,5 +465,6 @@
         private System.Windows.Forms.Button tbAbmelden;
         private System.Windows.Forms.TextBox tbSuche;
         private System.Windows.Forms.Label lbSuche;
+        private System.Windows.Forms.Button button4;
     }
 }
