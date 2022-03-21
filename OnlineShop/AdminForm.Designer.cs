@@ -54,6 +54,10 @@
             // 
             // dgvProdukte
             // 
+            this.dgvProdukte.AllowUserToAddRows = false;
+            this.dgvProdukte.AllowUserToDeleteRows = false;
+            this.dgvProdukte.AllowUserToResizeColumns = false;
+            this.dgvProdukte.AllowUserToResizeRows = false;
             this.dgvProdukte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProdukte.Location = new System.Drawing.Point(12, 57);
             this.dgvProdukte.Name = "dgvProdukte";
@@ -245,7 +249,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1113, 518);
+            this.ClientSize = new System.Drawing.Size(1425, 594);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbSuche);
             this.Controls.Add(this.btn_Datenleeren);
@@ -266,7 +270,10 @@
             this.Controls.Add(this.tb_ProduktName);
             this.Controls.Add(this.btn_hinzufuegen);
             this.Controls.Add(this.dgvProdukte);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "AdminForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdukte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBild)).EndInit();

@@ -380,7 +380,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1301, 520);
+            this.ClientSize = new System.Drawing.Size(1425, 594);
             this.Controls.Add(this.lbSuche);
             this.Controls.Add(this.tbSuche);
             this.Controls.Add(this.sideBar);
@@ -397,7 +397,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbProduktName);
             this.Controls.Add(this.dgvKleidung);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "KleidungsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KleidungsForm";
             ((System.ComponentModel.ISupportInitialize)(this.countMenge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKleidung)).EndInit();

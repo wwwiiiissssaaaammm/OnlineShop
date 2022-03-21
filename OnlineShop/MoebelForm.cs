@@ -115,22 +115,22 @@ namespace OnlineShop
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             sideBar.Size = new Size(234, 450);
-            dgvMoebel.Size = new Size(651, 363);
-            dgvMoebel.Location = new Point(238, 74);
-            lbSuche.Location = new Point(240, 44);
-            tbSuche.Size = new Size(588, 24);
-            tbSuche.Location = new Point(304, 44);
+            //dgvMoebel.Size = new Size(651, 363);
+            //dgvMoebel.Location = new Point(238, 74);
+            //lbSuche.Location = new Point(240, 44);
+            //tbSuche.Size = new Size(588, 24);
+            //tbSuche.Location = new Point(304, 44);
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             sideBar.Size = new Size(72, 450);
-            dgvMoebel.Size = new Size(814, 363);
-            dgvMoebel.Location = new Point(78, 74);
-            lbSuche.Location = new Point(78, 44);
-            tbSuche.Size = new Size(750, 24);
-            tbSuche.Location = new Point(142, 44);
+            //dgvMoebel.Size = new Size(814, 363);
+            //dgvMoebel.Location = new Point(78, 74);
+            //lbSuche.Location = new Point(78, 44);
+            //tbSuche.Size = new Size(750, 24);
+            //tbSuche.Location = new Point(142, 44);
         }
 
         private void btnMeineDaten_Click(object sender, EventArgs e)

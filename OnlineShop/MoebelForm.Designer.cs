@@ -67,7 +67,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(796, 443);
+            this.button2.Location = new System.Drawing.Point(1269, 515);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(96, 23);
             this.button2.TabIndex = 31;
@@ -77,7 +77,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(205, 455);
+            this.button1.Location = new System.Drawing.Point(1198, 427);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 23);
             this.button1.TabIndex = 30;
@@ -88,7 +88,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(905, 387);
+            this.label5.Location = new System.Drawing.Point(1179, 256);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 18);
             this.label5.TabIndex = 29;
@@ -97,17 +97,17 @@
             // tbSummePreis
             // 
             this.tbSummePreis.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSummePreis.Location = new System.Drawing.Point(1082, 381);
+            this.tbSummePreis.Location = new System.Drawing.Point(1180, 277);
             this.tbSummePreis.Name = "tbSummePreis";
             this.tbSummePreis.ReadOnly = true;
-            this.tbSummePreis.Size = new System.Drawing.Size(144, 24);
+            this.tbSummePreis.Size = new System.Drawing.Size(233, 24);
             this.tbSummePreis.TabIndex = 28;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(905, 277);
+            this.label4.Location = new System.Drawing.Point(1179, 161);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 18);
             this.label4.TabIndex = 27;
@@ -115,16 +115,16 @@
             // 
             // countMenge
             // 
-            this.countMenge.Location = new System.Drawing.Point(1082, 329);
+            this.countMenge.Location = new System.Drawing.Point(1182, 236);
             this.countMenge.Name = "countMenge";
-            this.countMenge.Size = new System.Drawing.Size(144, 20);
+            this.countMenge.Size = new System.Drawing.Size(231, 20);
             this.countMenge.TabIndex = 26;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(905, 329);
+            this.label3.Location = new System.Drawing.Point(1179, 212);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 18);
             this.label3.TabIndex = 25;
@@ -133,17 +133,17 @@
             // tbPreis
             // 
             this.tbPreis.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPreis.Location = new System.Drawing.Point(1082, 271);
+            this.tbPreis.Location = new System.Drawing.Point(1182, 182);
             this.tbPreis.Name = "tbPreis";
             this.tbPreis.ReadOnly = true;
-            this.tbPreis.Size = new System.Drawing.Size(144, 24);
+            this.tbPreis.Size = new System.Drawing.Size(231, 24);
             this.tbPreis.TabIndex = 24;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(905, 85);
+            this.label2.Location = new System.Drawing.Point(1177, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 18);
             this.label2.TabIndex = 23;
@@ -152,18 +152,18 @@
             // tbBeschreibung
             // 
             this.tbBeschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbBeschreibung.Location = new System.Drawing.Point(1009, 85);
+            this.tbBeschreibung.Location = new System.Drawing.Point(1180, 89);
             this.tbBeschreibung.Multiline = true;
             this.tbBeschreibung.Name = "tbBeschreibung";
             this.tbBeschreibung.ReadOnly = true;
-            this.tbBeschreibung.Size = new System.Drawing.Size(233, 127);
+            this.tbBeschreibung.Size = new System.Drawing.Size(233, 62);
             this.tbBeschreibung.TabIndex = 22;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(905, 29);
+            this.label1.Location = new System.Drawing.Point(1280, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 18);
             this.label1.TabIndex = 21;
@@ -172,10 +172,10 @@
             // tbProduktName
             // 
             this.tbProduktName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbProduktName.Location = new System.Drawing.Point(1082, 29);
+            this.tbProduktName.Location = new System.Drawing.Point(1182, 41);
             this.tbProduktName.Name = "tbProduktName";
             this.tbProduktName.ReadOnly = true;
-            this.tbProduktName.Size = new System.Drawing.Size(144, 24);
+            this.tbProduktName.Size = new System.Drawing.Size(231, 24);
             this.tbProduktName.TabIndex = 20;
             // 
             // dgvMoebel
@@ -185,7 +185,7 @@
             this.dgvMoebel.AllowUserToResizeColumns = false;
             this.dgvMoebel.AllowUserToResizeRows = false;
             this.dgvMoebel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMoebel.Location = new System.Drawing.Point(78, 74);
+            this.dgvMoebel.Location = new System.Drawing.Point(243, 59);
             this.dgvMoebel.MaximumSize = new System.Drawing.Size(814, 363);
             this.dgvMoebel.MinimumSize = new System.Drawing.Size(651, 363);
             this.dgvMoebel.Name = "dgvMoebel";
@@ -203,10 +203,10 @@
             this.sideBar.Controls.Add(this.panel4);
             this.sideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideBar.Location = new System.Drawing.Point(0, 0);
-            this.sideBar.MaximumSize = new System.Drawing.Size(234, 450);
-            this.sideBar.MinimumSize = new System.Drawing.Size(72, 450);
+            this.sideBar.MaximumSize = new System.Drawing.Size(234, 601);
+            this.sideBar.MinimumSize = new System.Drawing.Size(72, 601);
             this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(72, 450);
+            this.sideBar.Size = new System.Drawing.Size(234, 601);
             this.sideBar.TabIndex = 46;
             // 
             // panel2
@@ -361,7 +361,7 @@
             // tbSuche
             // 
             this.tbSuche.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSuche.Location = new System.Drawing.Point(142, 44);
+            this.tbSuche.Location = new System.Drawing.Point(304, 12);
             this.tbSuche.Name = "tbSuche";
             this.tbSuche.Size = new System.Drawing.Size(750, 24);
             this.tbSuche.TabIndex = 47;
@@ -371,7 +371,7 @@
             // 
             this.lbSuche.AutoSize = true;
             this.lbSuche.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSuche.Location = new System.Drawing.Point(78, 44);
+            this.lbSuche.Location = new System.Drawing.Point(240, 15);
             this.lbSuche.Name = "lbSuche";
             this.lbSuche.Size = new System.Drawing.Size(58, 18);
             this.lbSuche.TabIndex = 48;
@@ -381,7 +381,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1243, 507);
+            this.ClientSize = new System.Drawing.Size(1425, 594);
             this.Controls.Add(this.lbSuche);
             this.Controls.Add(this.tbSuche);
             this.Controls.Add(this.sideBar);
@@ -398,7 +398,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbProduktName);
             this.Controls.Add(this.dgvMoebel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "MoebelForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MoebelForm";
             ((System.ComponentModel.ISupportInitialize)(this.countMenge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMoebel)).EndInit();

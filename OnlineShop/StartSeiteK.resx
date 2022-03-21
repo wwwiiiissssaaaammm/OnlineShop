@@ -118,6 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnMeineDaten.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAOBJREFUOE+1kr1qQkEQRte/RggBW4s0WoggCVjZBCx8gYCNhRY+gIVoJSnSiNj4
+        AtoKEv9IxLxdzuzcu1xCcFfEA4f9Zothd3bNvcjgO+7xE1dYxmAm2NFoqaI0e7ZVANtoTSJNPjT62URr
+        khJONfqRe+c0Ot6wp9HPF6Y1Opo40uhHXqCt0bHGmkY/D3jCrK2MqeBSYzgLfNJoxtjQGEYev/HRVsZ0
+        caDxMkWc4RFfZSNCBjpEadrHvy9kaeEBX2z1PzIT+aEyn4JsxKTwjPHQfNRRTuqQbj+4u8I53ooxv1BV
+        IBQcLLRHAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
@@ -731,16 +741,6 @@
         nz593uBoeVtrj9GnT58+245CprX2GH369OnTp0+fPn369OnTp0+fPn369OnTp0+fPn369OnTp0+fPn36
         9OnTp0+fPt/x9P97kn369OnTp8/bn/730Pv06dOnT58+ffr06dOnT58+ffr06dOnT58+L3A+//+1qbXW
         2mP1+eP81V/9/wBrN60m4LU32wAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnMeineDaten.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAOBJREFUOE+1kr1qQkEQRte/RggBW4s0WoggCVjZBCx8gYCNhRY+gIVoJSnSiNj4
-        AtoKEv9IxLxdzuzcu1xCcFfEA4f9Zothd3bNvcjgO+7xE1dYxmAm2NFoqaI0e7ZVANtoTSJNPjT62URr
-        khJONfqRe+c0Ot6wp9HPF6Y1Opo40uhHXqCt0bHGmkY/D3jCrK2MqeBSYzgLfNJoxtjQGEYev/HRVsZ0
-        caDxMkWc4RFfZSNCBjpEadrHvy9kaeEBX2z1PzIT+aEyn4JsxKTwjPHQfNRRTuqQbj+4u8I53ooxv1BV
-        IBQcLLRHAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="tbGeraete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

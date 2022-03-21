@@ -124,5 +124,12 @@ namespace OnlineShop
             
           
         }
+
+        private void btnzurueck_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StartSeiteK form = new StartSeiteK(kundenid);
+            form.ShowDialog();
+        }
     }
 }

@@ -165,11 +165,17 @@
     <EmbeddedResource Include="AdminStartSeite.resx">
       <DependentUpon>AdminStartSeite.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Bestellungen.resx">
+      <DependentUpon>Bestellungen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GeraetsForm.resx">
       <DependentUpon>GeraetsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KleidungsForm.resx">
       <DependentUpon>KleidungsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kundenDatenA.resx">
+      <DependentUpon>kundenDatenA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KundenDatenK.resx">
       <DependentUpon>KundenDatenK.cs</DependentUpon>

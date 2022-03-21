@@ -217,19 +217,22 @@
             // dgvAlleProdukte
             // 
             this.dgvAlleProdukte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlleProdukte.Location = new System.Drawing.Point(238, 42);
+            this.dgvAlleProdukte.Location = new System.Drawing.Point(441, 108);
             this.dgvAlleProdukte.Name = "dgvAlleProdukte";
-            this.dgvAlleProdukte.Size = new System.Drawing.Size(575, 293);
+            this.dgvAlleProdukte.Size = new System.Drawing.Size(766, 227);
             this.dgvAlleProdukte.TabIndex = 2;
             // 
             // StartSeiteK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 450);
+            this.ClientSize = new System.Drawing.Size(1425, 594);
             this.Controls.Add(this.dgvAlleProdukte);
             this.Controls.Add(this.sideBar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "StartSeiteK";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.sideBar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

@@ -67,11 +67,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1425, 594);
             this.Controls.Add(this.btnProdukteVerwalten);
             this.Controls.Add(this.btnBestellungen);
             this.Controls.Add(this.btn_KundenDaten);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "AdminStartSeite";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminStartSeite";
             this.ResumeLayout(false);
 
