@@ -1,5 +1,6 @@
 create database OnlineShop;
 use OnlineShop;
+
 create table kunde(
 Kunde_ID int(100) not null auto_increment primary key,
 vorname varchar(100) not null ,
@@ -21,13 +22,18 @@ Bezeichnung varchar(100)
 
 );
 
+ insert into Kategorie(Bezeichnung)values('Möbel');
+ insert into Kategorie(Bezeichnung)values('Kleidung');
+ insert into Kategorie(Bezeichnung)values('Geräte');
+
+
 create table Produkte(
 Produkt_id int(100) not null auto_increment primary key,
 Kategorie_id int(100),
 FOREIGN KEY (Kategorie_id) REFERENCES Kategorie(Kategorie_id),
  Bezeichnung varchar(100),
  Beschreibung text,
- Preis varchar(100),
+ Preis double(6,2),
  Foto blob
  );
  
@@ -37,7 +43,26 @@ FOREIGN KEY (Kategorie_id) REFERENCES Kategorie(Kategorie_id),
  foreign key (Kunde_id) references kunde(Kunde_ID),
  foreign key (Produkte_id) references Produkte(Produkt_id),
  Menge int(100),
- preis varchar(100),
- Datum varchar(100)
+ preis double(6,2),
+ Datum datetime
  
  );
+
+ alter table Kunde_Produkte add Bestellung_ID int primary key auto_increment not null;
+
+
+create table bestellung(
+Bestellung_ID int primary key auto_increment not null,
+ Kunde_id int(100),
+ foreign key (Kunde_id) references kunde(Kunde_ID),
+ Bezeichnung varchar(100),
+ Menge int(100),
+ preis double(6,2),
+ Datum datetime
+);
+
+ insert into kunde(vorname, nachname, email, ort, strasse, Hausnummer, plz, Telefonnummer, Passwort, ist_Admin) values('Admin', 'a','a','a','a','a','a',12,md5('Admin'),true);
+ insert into kunde(vorname, nachname, email, ort, strasse, Hausnummer, plz, Telefonnummer, Passwort, ist_Admin) values('kunde', 'a','a','a','a','a','a',12,md5('kunde'),false);
+
+/////////////////////////////////////////Die Produkte soll man beim Admin Form hinzufügen///////////////////////////////////////////////// 
+

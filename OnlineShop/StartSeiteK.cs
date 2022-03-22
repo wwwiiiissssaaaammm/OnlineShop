@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace OnlineShop
 {
     public partial class StartSeiteK : Form
     {
+        MySqlConnection conn = new MySqlConnection("SERVER=localhost; UID=root; Database=OnlineShop; PASSWORD='';");
+
         private int kundenid;
 
 
@@ -19,6 +22,7 @@ namespace OnlineShop
         {
             this.kundenid = kundenid;
             InitializeComponent();
+            FillDgv(tbSuche.Text);
         }
         //Sidebar Design ------------------------------------------
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -353,5 +357,36 @@ namespace OnlineShop
             }
         }
         //////////////////////////////////////////////////////////////////////////
+        ///
+        public void FillDgv(string suchwert)
+        {
+            MySqlCommand cmd = new MySqlCommand("select Kategorie_id, Bezeichnung, Beschreibung, Preis, Foto from OnlineShop.produkte where Bezeichnung like '%"+tbSuche.Text+"%'", conn);
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+
+            DataTable table = new DataTable();
+
+            adapter.Fill(table);
+
+            dgvAlleProdukte.AllowUserToAddRows = false;
+            dgvAlleProdukte.DataSource = table;
+
+            dgvAlleProdukte.RowTemplate.Height = 100;
+
+            DataGridViewImageColumn dgimco = new DataGridViewImageColumn();
+
+            dgimco = (DataGridViewImageColumn)dgvAlleProdukte.Columns[4];
+            dgimco.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            dgvAlleProdukte.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+        }
+
+        private void tbSuche_TextChanged(object sender, EventArgs e)
+        {
+            FillDgv(tbSuche.Text);
+        }
     }
+
+
+
 }

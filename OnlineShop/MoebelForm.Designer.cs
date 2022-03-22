@@ -44,6 +44,7 @@
             this.dgvMoebel = new System.Windows.Forms.DataGridView();
             this.sideBar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnMeineDaten = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@
             this.tbAbmelden = new System.Windows.Forms.Button();
             this.tbSuche = new System.Windows.Forms.TextBox();
             this.lbSuche = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.countMenge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMoebel)).BeginInit();
             this.sideBar.SuspendLayout();
@@ -221,6 +221,18 @@
             this.panel2.Size = new System.Drawing.Size(229, 99);
             this.panel2.TabIndex = 1;
             // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(188, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(38, 30);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "X";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -384,18 +396,6 @@
             this.lbSuche.Size = new System.Drawing.Size(58, 18);
             this.lbSuche.TabIndex = 48;
             this.lbSuche.Text = "Suchen";
-            // 
-            // button3
-            // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(188, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(38, 30);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "X";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // MoebelForm
             // 

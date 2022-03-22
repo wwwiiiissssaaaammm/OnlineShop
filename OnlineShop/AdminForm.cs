@@ -148,7 +148,7 @@ namespace OnlineShop
             DataGridViewImageColumn dgimco = new DataGridViewImageColumn();
 
             dgimco = (DataGridViewImageColumn)dgvProdukte.Columns[5];
-            dgimco.ImageLayout = DataGridViewImageCellLayout.Stretch;
+            dgimco.ImageLayout = DataGridViewImageCellLayout.Zoom;
             dgvProdukte.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
 

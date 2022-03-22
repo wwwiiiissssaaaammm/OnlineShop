@@ -44,7 +44,7 @@ namespace OnlineShop
             DataGridViewImageColumn dgimco = new DataGridViewImageColumn();
 
             dgimco = (DataGridViewImageColumn)dgvGeraete.Columns[4];
-            dgimco.ImageLayout = DataGridViewImageCellLayout.Stretch;
+            dgimco.ImageLayout = DataGridViewImageCellLayout.Zoom;
             dgvGeraete.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
         }

@@ -33,29 +33,17 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnMeineDaten = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnstartseite = new System.Windows.Forms.Button();
             this.btnBestellung = new System.Windows.Forms.Button();
             this.btnWarenkorb = new System.Windows.Forms.Button();
-            this.btnMeineDaten = new System.Windows.Forms.Button();
             this.btnGeraete = new System.Windows.Forms.Button();
             this.btnMoebel = new System.Windows.Forms.Button();
             this.btnKleidung = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnAbmelden = new System.Windows.Forms.Button();
             this.dgvAlleProdukte = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbSuche = new System.Windows.Forms.TextBox();
             this.lbSuche = new System.Windows.Forms.Label();
             this.sideBar.SuspendLayout();
@@ -114,6 +102,26 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // btnMeineDaten
+            // 
+            this.btnMeineDaten.BackColor = System.Drawing.Color.Gray;
+            this.btnMeineDaten.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMeineDaten.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMeineDaten.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMeineDaten.Image = ((System.Drawing.Image)(resources.GetObject("btnMeineDaten.Image")));
+            this.btnMeineDaten.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMeineDaten.Location = new System.Drawing.Point(3, 97);
+            this.btnMeineDaten.Name = "btnMeineDaten";
+            this.btnMeineDaten.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnMeineDaten.Size = new System.Drawing.Size(60, 30);
+            this.btnMeineDaten.TabIndex = 1;
+            this.btnMeineDaten.Text = "               Meine Daten";
+            this.btnMeineDaten.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMeineDaten.UseVisualStyleBackColor = false;
+            this.btnMeineDaten.Click += new System.EventHandler(this.btnMeineDaten_Click);
+            this.btnMeineDaten.MouseEnter += new System.EventHandler(this.btnMeineDaten_MouseEnter);
+            this.btnMeineDaten.MouseLeave += new System.EventHandler(this.btnMeineDaten_MouseLeave);
             // 
             // panel3
             // 
@@ -186,26 +194,6 @@
             this.btnWarenkorb.Click += new System.EventHandler(this.button4_Click);
             this.btnWarenkorb.MouseEnter += new System.EventHandler(this.btnWarenkorb_MouseEnter);
             this.btnWarenkorb.MouseLeave += new System.EventHandler(this.btnWarenkorb_MouseLeave);
-            // 
-            // btnMeineDaten
-            // 
-            this.btnMeineDaten.BackColor = System.Drawing.Color.Gray;
-            this.btnMeineDaten.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMeineDaten.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMeineDaten.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMeineDaten.Image = ((System.Drawing.Image)(resources.GetObject("btnMeineDaten.Image")));
-            this.btnMeineDaten.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMeineDaten.Location = new System.Drawing.Point(3, 97);
-            this.btnMeineDaten.Name = "btnMeineDaten";
-            this.btnMeineDaten.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnMeineDaten.Size = new System.Drawing.Size(60, 30);
-            this.btnMeineDaten.TabIndex = 1;
-            this.btnMeineDaten.Text = "               Meine Daten";
-            this.btnMeineDaten.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMeineDaten.UseVisualStyleBackColor = false;
-            this.btnMeineDaten.Click += new System.EventHandler(this.btnMeineDaten_Click);
-            this.btnMeineDaten.MouseEnter += new System.EventHandler(this.btnMeineDaten_MouseEnter);
-            this.btnMeineDaten.MouseLeave += new System.EventHandler(this.btnMeineDaten_MouseLeave);
             // 
             // btnGeraete
             // 
@@ -300,85 +288,12 @@
             // 
             this.dgvAlleProdukte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAlleProdukte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlleProdukte.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11,
-            this.Column12});
             this.dgvAlleProdukte.Location = new System.Drawing.Point(78, 83);
             this.dgvAlleProdukte.MaximumSize = new System.Drawing.Size(1335, 487);
             this.dgvAlleProdukte.MinimumSize = new System.Drawing.Size(1173, 487);
             this.dgvAlleProdukte.Name = "dgvAlleProdukte";
             this.dgvAlleProdukte.Size = new System.Drawing.Size(1335, 487);
             this.dgvAlleProdukte.TabIndex = 2;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Column2";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Column3";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Column4";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Column5";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Column6";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Column7";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Column8";
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Column9";
-            this.Column9.Name = "Column9";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Column10";
-            this.Column10.Name = "Column10";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Column11";
-            this.Column11.Name = "Column11";
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Column12";
-            this.Column12.Name = "Column12";
             // 
             // tbSuche
             // 
@@ -388,6 +303,7 @@
             this.tbSuche.Name = "tbSuche";
             this.tbSuche.Size = new System.Drawing.Size(1335, 24);
             this.tbSuche.TabIndex = 49;
+            this.tbSuche.TextChanged += new System.EventHandler(this.tbSuche_TextChanged);
             // 
             // lbSuche
             // 
@@ -446,18 +362,6 @@
         private System.Windows.Forms.Button btnBestellung;
         private System.Windows.Forms.TextBox tbSuche;
         private System.Windows.Forms.Label lbSuche;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.Button btnstartseite;
     }
 }
