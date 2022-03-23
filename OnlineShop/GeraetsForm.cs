@@ -23,12 +23,12 @@ namespace OnlineShop
         {
             this.kundenid = kundenid;
             InitializeComponent();
-            FillDgv(tbsuche.Text);
+            FillDgv(tbSuche.Text);
         }
 
         public void FillDgv(string suchwert)
         {
-            MySqlCommand cmd = new MySqlCommand("select Produkt_id ,Bezeichnung, Beschreibung, Preis , Foto from produkte where Kategorie_id = 3 and Bezeichnung like '%"+tbsuche.Text+"%' ;", conn);
+            MySqlCommand cmd = new MySqlCommand("select Produkt_id ,Bezeichnung, Beschreibung, Preis , Foto from produkte where Kategorie_id = 3 and Bezeichnung like '%"+tbSuche.Text+"%' ;", conn);
 
             MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
 
@@ -117,23 +117,108 @@ namespace OnlineShop
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            sideBar.Size = new Size(234, 450);
-            dgvGeraete.Size = new Size(651, 363);
-            dgvGeraete.Location = new Point(238, 42);
-            lbSuche.Location = new Point(239, 15);
-            tbsuche.Location = new Point(312, 12);
-            tbsuche.Size = new Size(578, 24);
+            if (sideBar.Size.Width == 63)
+            {
+                sideBar.Size = new Size(234, 595);
+                this.sideBar.BackColor = Color.FromArgb(105, 105, 105, 100);
+
+                label6.Text = "Menu";
+                label6.ForeColor = Color.Black;
+                label6.BackColor = Color.Transparent;
+
+                btnMeineDaten.BackColor = Color.Pink;
+                btnMeineDaten.Width = 223;
+                btnMeineDaten.Text = "             Meine Daten";
+
+                btnstartseite.BackColor = Color.Pink;
+                btnstartseite.Width = 223;
+                btnstartseite.Text = "             Home";
+
+
+                btnGeraete.BackColor = Color.Pink;
+                btnGeraete.Width = 223;
+                btnGeraete.Text = "             Geräte";
+
+                btnMoebel.BackColor = Color.Pink;
+                btnMoebel.Width = 223;
+                btnMoebel.Text = "             Möbel";
+
+                btnKleidung.BackColor = Color.Pink;
+                btnKleidung.Width = 223;
+                btnKleidung.Text = "             Kleidung";
+
+                btnWarenkorb.BackColor = Color.Pink;
+                btnWarenkorb.Width = 223;
+                btnWarenkorb.Text = "             Warenkorb";
+
+                btnBestellung.BackColor = Color.Pink;
+                btnBestellung.Width = 223;
+                btnBestellung.Text = "             Meine Bestellungen";
+
+                btnAbmelden.BackColor = Color.Pink;
+                btnAbmelden.Width = 223;
+                btnAbmelden.Text = "             Abmelden";
+
+
+                dgvGeraete.Size = new Size(881, 460);
+                dgvGeraete.Location = new Point(240, 45);
+                tbSuche.Size = new Size(746, 24);
+                tbSuche.Location = new Point(306, 15);
+
+
+                
+
+            }
+            else
+            {
+
+                sideBar.Size = new Size(63, 592);
+                sideBar.BackColor = Color.Transparent;
+                label6.Text = "";
+
+                btnMeineDaten.BackColor = Color.Gray;
+                btnMeineDaten.Text = "";
+                btnMeineDaten.Width = 60;
+
+                btnstartseite.BackColor = Color.Gray;
+                btnstartseite.Text = "";
+                btnstartseite.Width = 60;
+
+
+                btnGeraete.BackColor = Color.Gray;
+                btnGeraete.Text = "";
+                btnGeraete.Width = 60;
+
+                btnMoebel.BackColor = Color.Gray;
+                btnMoebel.Width = 60;
+                btnMoebel.Text = "";
+
+                btnKleidung.BackColor = Color.Gray;
+                btnKleidung.Width = 60;
+                btnKleidung.Text = "";
+
+                btnWarenkorb.BackColor = Color.Gray;
+                btnWarenkorb.Width = 60;
+                btnWarenkorb.Text = "";
+
+                btnBestellung.BackColor = Color.Gray;
+                btnBestellung.Width = 60;
+                btnBestellung.Text = "";
+
+                btnAbmelden.BackColor = Color.Gray;
+                btnAbmelden.Width = 60;
+                btnAbmelden.Text = "";
+
+                dgvGeraete.Size = new Size(966, 460);
+                dgvGeraete.Location = new Point(155, 45);
+                tbSuche.Size = new Size(746, 24);
+                tbSuche.Location = new Point(268, 15);
+
+
+            }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            sideBar.Size = new Size(72, 450);
-            dgvGeraete.Size = new Size(812, 363);
-            dgvGeraete.Location = new Point(78, 42);
-            lbSuche.Location = new Point(84, 15);
-            tbsuche.Location = new Point(146, 12);
-            tbsuche.Size = new Size(744, 24);
-        }
+        
 
         private void btnMeineDaten_Click(object sender, EventArgs e)
         {
@@ -144,9 +229,7 @@ namespace OnlineShop
 
         private void tbGeraete_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            GeraetsForm geraets = new GeraetsForm(kundenid);
-            geraets.ShowDialog();
+            
         }
 
         private void tbMoebel_Click(object sender, EventArgs e)
@@ -178,7 +261,7 @@ namespace OnlineShop
 
         private void tbsuche_TextChanged(object sender, EventArgs e)
         {
-            FillDgv(tbsuche.Text);
+            FillDgv(tbSuche.Text);
 
         }
 
@@ -187,6 +270,225 @@ namespace OnlineShop
             this.Hide();
             WarenKorb waren = new WarenKorb(kundenid);
             waren.ShowDialog();
+        }
+
+        private void btnDetail_Click(object sender, EventArgs e)
+        {
+            if(panel.Visible == true) {      
+            panel.Visible = false;
+            btnDetail.Text = "Show more Details";
+                btnDetail.Location = new Point(1147, 144);
+
+            }
+            else if (panel.Visible == false)
+            {
+                panel.Visible = true;
+                btnDetail.Text = "Show less Details";
+                btnDetail.Location = new Point(1154, 251);
+
+
+            }
+        }
+
+        private void btnstartseite_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StartSeiteK form = new StartSeiteK(kundenid);
+            form.ShowDialog();
+        }
+
+        private void btnzuruck_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StartSeiteK form = new StartSeiteK(kundenid);
+            form.ShowDialog();
+        }
+
+        private void btnBestellung_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BestellungenK form = new BestellungenK();
+            form.ShowDialog();
+
+
+        }
+
+        private void btnMeineDaten_MouseEnter(object sender, EventArgs e)
+        {
+            if (btnMeineDaten.Width < 70)
+            {
+                btnMeineDaten.BackColor = Color.Pink;
+            }
+            else if (btnMeineDaten.Width > 200)
+            {
+                btnMeineDaten.BackColor = Color.White;
+            }
+        }
+        private void btnMeineDaten_MouseLeave(object sender, EventArgs e)
+        {
+            if (btnMeineDaten.Width < 70)
+            {
+                btnMeineDaten.BackColor = Color.Gray;
+            }
+            else if (btnMeineDaten.Width > 200)
+            {
+                btnMeineDaten.BackColor = Color.Pink;
+            }
+
+        }
+        private void btnstartseite_MouseEnter(object sender, EventArgs e)
+        {
+            if (btnstartseite.Width < 70)
+            {
+                btnstartseite.BackColor = Color.Pink;
+            }
+            else if (btnstartseite.Width > 200)
+            {
+                btnstartseite.BackColor = Color.White;
+            }
+        }
+        private void btnstartseite_MouseLeave(object sender, EventArgs e)
+        {
+            if (btnstartseite.Width < 70)
+            {
+                btnstartseite.BackColor = Color.Gray;
+            }
+            else if (btnstartseite.Width > 200)
+            {
+                btnstartseite.BackColor = Color.Pink;
+            }
+        }
+        private void btnGeraete_MouseEnter(object sender, EventArgs e)
+        {
+            if (btnGeraete.Width < 70)
+            {
+                btnGeraete.BackColor = Color.Pink;
+            }
+            else if (btnGeraete.Width > 200)
+            {
+                btnGeraete.BackColor = Color.White;
+            }
+        }
+        private void btnGeraete_MouseLeave(object sender, EventArgs e)
+        {
+            if (btnGeraete.Width < 70)
+            {
+                btnGeraete.BackColor = Color.Gray;
+            }
+            else if (btnGeraete.Width > 200)
+            {
+                btnGeraete.BackColor = Color.Pink;
+            }
+        }
+        private void btnMoebel_MouseEnter(object sender, EventArgs e)
+        {
+            if (btnMoebel.Width < 70)
+            {
+                btnMoebel.BackColor = Color.Pink;
+            }
+            else if (btnMoebel.Width > 200)
+            {
+                btnMoebel.BackColor = Color.White;
+            }
+        }
+        private void btnMoebel_MouseLeave(object sender, EventArgs e)
+        {
+            if (btnMoebel.Width < 70)
+            {
+                btnMoebel.BackColor = Color.Gray;
+            }
+            else if (btnMoebel.Width > 200)
+            {
+                btnMoebel.BackColor = Color.Pink;
+            }
+        }
+        private void btnKleidung_MouseEnter(object sender, EventArgs e)
+        {
+            if (btnKleidung.Width < 70)
+            {
+                btnKleidung.BackColor = Color.Pink;
+            }
+            else if (btnKleidung.Width > 200)
+            {
+                btnKleidung.BackColor = Color.White;
+            }
+        }
+        private void btnKleidung_MouseLeave(object sender, EventArgs e)
+        {
+            if (btnKleidung.Width < 70)
+            {
+                btnKleidung.BackColor = Color.Gray;
+            }
+            else if (btnKleidung.Width > 200)
+            {
+                btnKleidung.BackColor = Color.Pink;
+            }
+        }
+        private void btnWarenkorb_MouseEnter(object sender, EventArgs e)
+        {
+            if (btnWarenkorb.Width < 70)
+            {
+                btnWarenkorb.BackColor = Color.Pink;
+            }
+            else if (btnWarenkorb.Width > 200)
+            {
+                btnWarenkorb.BackColor = Color.White;
+            }
+        }
+        private void btnWarenkorb_MouseLeave(object sender, EventArgs e)
+        {
+            if (btnWarenkorb.Width < 70)
+            {
+                btnWarenkorb.BackColor = Color.Gray;
+            }
+            else if (btnWarenkorb.Width > 200)
+            {
+                btnWarenkorb.BackColor = Color.Pink;
+            }
+        }
+        private void btnBestellung_MouseEnter(object sender, EventArgs e)
+        {
+            if (btnBestellung.Width < 70)
+            {
+                btnBestellung.BackColor = Color.Pink;
+            }
+            else if (btnBestellung.Width > 200)
+            {
+                btnBestellung.BackColor = Color.White;
+            }
+        }
+        private void btnBestellung_MouseLeave(object sender, EventArgs e)
+        {
+            if (btnBestellung.Width < 70)
+            {
+                btnBestellung.BackColor = Color.Gray;
+            }
+            else if (btnBestellung.Width > 200)
+            {
+                btnBestellung.BackColor = Color.Pink;
+            }
+        }
+        private void btnAbmelden_MouseEnter(object sender, EventArgs e)
+        {
+            if (btnAbmelden.Width < 70)
+            {
+                btnAbmelden.BackColor = Color.Red;
+            }
+            else if (btnAbmelden.Width > 200)
+            {
+                btnAbmelden.BackColor = Color.Red;
+            }
+        }
+        private void btnAbmelden_MouseLeave(object sender, EventArgs e)
+        {
+            if (btnAbmelden.Width < 70)
+            {
+                btnAbmelden.BackColor = Color.Gray;
+            }
+            else if (btnAbmelden.Width > 200)
+            {
+                btnAbmelden.BackColor = Color.Pink;
+            }
         }
     }
 }

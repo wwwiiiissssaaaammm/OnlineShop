@@ -153,6 +153,7 @@
             this.btnstartseite.Text = "               Home";
             this.btnstartseite.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnstartseite.UseVisualStyleBackColor = false;
+            this.btnstartseite.Click += new System.EventHandler(this.btnstartseite_Click);
             this.btnstartseite.MouseEnter += new System.EventHandler(this.btnstartseite_MouseEnter);
             this.btnstartseite.MouseLeave += new System.EventHandler(this.btnstartseite_MouseLeave);
             // 
@@ -172,6 +173,7 @@
             this.btnBestellung.Text = "               Meine Bestellungen";
             this.btnBestellung.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBestellung.UseVisualStyleBackColor = false;
+            this.btnBestellung.Click += new System.EventHandler(this.btnBestellung_Click);
             this.btnBestellung.MouseEnter += new System.EventHandler(this.btnBestellung_MouseEnter);
             this.btnBestellung.MouseLeave += new System.EventHandler(this.btnBestellung_MouseLeave);
             // 
@@ -272,7 +274,7 @@
             this.btnAbmelden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAbmelden.Image = ((System.Drawing.Image)(resources.GetObject("btnAbmelden.Image")));
             this.btnAbmelden.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAbmelden.Location = new System.Drawing.Point(3, 3);
+            this.btnAbmelden.Location = new System.Drawing.Point(3, 21);
             this.btnAbmelden.Name = "btnAbmelden";
             this.btnAbmelden.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnAbmelden.Size = new System.Drawing.Size(60, 27);

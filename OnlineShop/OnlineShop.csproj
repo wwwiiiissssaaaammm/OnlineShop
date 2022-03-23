@@ -107,6 +107,12 @@
     <Compile Include="Bestellungen.Designer.cs">
       <DependentUpon>Bestellungen.cs</DependentUpon>
     </Compile>
+    <Compile Include="BestellungenK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BestellungenK.Designer.cs">
+      <DependentUpon>BestellungenK.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeraetsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Bestellungen.resx">
       <DependentUpon>Bestellungen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BestellungenK.resx">
+      <DependentUpon>BestellungenK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeraetsForm.resx">
       <DependentUpon>GeraetsForm.cs</DependentUpon>

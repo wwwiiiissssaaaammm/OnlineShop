@@ -75,12 +75,9 @@ namespace OnlineShop
 
                 tbSuche.Size = new Size(1173, 24);
                 tbSuche.Location = new Point(240, 53);
-
-
             }
             else
-            {
-                
+            {           
                 sideBar.Size = new Size(63, 592);
                 sideBar.BackColor = Color.Transparent;
                 label2.Text = "";
@@ -124,8 +121,7 @@ namespace OnlineShop
                 tbSuche.Size = new Size(1335, 24);
                 tbSuche.Location = new Point(78, 53);
             }
-            //dgvAlleProdukte.Size = new Size(550, 293);
-            //dgvAlleProdukte.Location = new Point(241, 42);
+            
         } 
 
         
@@ -384,6 +380,18 @@ namespace OnlineShop
         private void tbSuche_TextChanged(object sender, EventArgs e)
         {
             FillDgv(tbSuche.Text);
+        }
+
+        private void btnstartseite_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnBestellung_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BestellungenK form = new BestellungenK();
+            form.ShowDialog();
         }
     }
 
