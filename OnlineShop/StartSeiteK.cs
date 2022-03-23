@@ -390,7 +390,7 @@ namespace OnlineShop
         private void btnBestellung_Click(object sender, EventArgs e)
         {
             this.Hide();
-            BestellungenK form = new BestellungenK();
+            BestellungenK form = new BestellungenK(kundenid);
             form.ShowDialog();
         }
     }

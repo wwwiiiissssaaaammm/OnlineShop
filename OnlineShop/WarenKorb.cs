@@ -25,7 +25,10 @@ namespace OnlineShop
 
         public void fillDgv()
         {
-            MySqlDataAdapter adapter = new MySqlDataAdapter(" select kp.Bestellung_ID, k.Kunde_ID, p.Bezeichnung, kp.Menge, kp.preis, kp.Datum from Kunde_Produkte kp left join produkte p on kp.Produkte_id = p.Produkt_id left join kunde k on kp.Kunde_id = k.Kunde_ID where kp.Kunde_id = "+Kundenid+" ; ",conn);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(@"select kp.Produkt_id,kp.Bestellung_ID, k.Kunde_ID, p.Bezeichnung, kp.Menge, kp.preis, kp.Datum from Kunde_Produkte kp 
+left join produkte p on kp.Produkt_id = p.Produkt_id 
+left join kunde k on kp.Kunde_id = k.Kunde_ID 
+where kp.Kunde_id = "+Kundenid, conn);
             DataTable tbl = new DataTable();
             adapter.Fill(tbl);
             dgvBestellungen.DataSource = tbl;
@@ -80,7 +83,8 @@ namespace OnlineShop
 
             for (int i = 0; i < dgvBestellungen.Rows.Count - 1; i++)
             {
-                cmd = new MySqlCommand("insert into OnlineShop.bestellung (Kunde_id, Bezeichnung, Menge, preis, Datum) values(" + Kundenid + ",@bez,@menge,@preis, now())", conn);
+                cmd = new MySqlCommand("insert into OnlineShop.bestellung (Produkt_id,Kunde_id, Bezeichnung, Menge, preis, Datum) values(@Pid ," + Kundenid + ",@bez,@menge,@preis, now())", conn);
+                cmd.Parameters.AddWithValue("Pid", dgvBestellungen.Rows[i].Cells["Produkt_id"].Value.ToString());
                 cmd.Parameters.AddWithValue("bez", dgvBestellungen.Rows[i].Cells["Bezeichnung"].Value.ToString());
                 cmd.Parameters.AddWithValue("menge", dgvBestellungen.Rows[i].Cells["Menge"].Value.ToString());
                 cmd.Parameters.AddWithValue("preis", dgvBestellungen.Rows[i].Cells["preis"].Value.ToString());

@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.dgvBestellungen = new System.Windows.Forms.DataGridView();
+            this.btnBestellen = new System.Windows.Forms.Button();
+            this.tbBerechnen = new System.Windows.Forms.TextBox();
+            this.btnBerechnen = new System.Windows.Forms.Button();
+            this.Produkt_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bestellung_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kunde_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bezeichnung = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,9 +40,6 @@
             this.preis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnloeschen = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnBestellen = new System.Windows.Forms.Button();
-            this.tbBerechnen = new System.Windows.Forms.TextBox();
-            this.btnBerechnen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBestellungen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             // 
             this.dgvBestellungen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBestellungen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Produkt_id,
             this.Bestellung_ID,
             this.Kunde_ID,
             this.Bezeichnung,
@@ -56,9 +58,48 @@
             this.dgvBestellungen.Location = new System.Drawing.Point(155, 12);
             this.dgvBestellungen.Name = "dgvBestellungen";
             this.dgvBestellungen.ReadOnly = true;
-            this.dgvBestellungen.Size = new System.Drawing.Size(745, 276);
+            this.dgvBestellungen.Size = new System.Drawing.Size(843, 276);
             this.dgvBestellungen.TabIndex = 0;
             this.dgvBestellungen.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBestellungen_CellContentClick);
+            // 
+            // btnBestellen
+            // 
+            this.btnBestellen.Enabled = false;
+            this.btnBestellen.Location = new System.Drawing.Point(274, 371);
+            this.btnBestellen.Name = "btnBestellen";
+            this.btnBestellen.Size = new System.Drawing.Size(526, 23);
+            this.btnBestellen.TabIndex = 1;
+            this.btnBestellen.Text = "Bestellen";
+            this.btnBestellen.UseVisualStyleBackColor = true;
+            this.btnBestellen.Click += new System.EventHandler(this.btnBestellen_Click);
+            // 
+            // tbBerechnen
+            // 
+            this.tbBerechnen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbBerechnen.Location = new System.Drawing.Point(700, 294);
+            this.tbBerechnen.Name = "tbBerechnen";
+            this.tbBerechnen.ReadOnly = true;
+            this.tbBerechnen.Size = new System.Drawing.Size(100, 24);
+            this.tbBerechnen.TabIndex = 2;
+            this.tbBerechnen.TextChanged += new System.EventHandler(this.tbBerechnen_TextChanged);
+            // 
+            // btnBerechnen
+            // 
+            this.btnBerechnen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBerechnen.Location = new System.Drawing.Point(567, 295);
+            this.btnBerechnen.Name = "btnBerechnen";
+            this.btnBerechnen.Size = new System.Drawing.Size(94, 23);
+            this.btnBerechnen.TabIndex = 3;
+            this.btnBerechnen.Text = "Berechnen";
+            this.btnBerechnen.UseVisualStyleBackColor = true;
+            this.btnBerechnen.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Produkt_id
+            // 
+            this.Produkt_id.DataPropertyName = "Produkt_id";
+            this.Produkt_id.HeaderText = "Produkt_id";
+            this.Produkt_id.Name = "Produkt_id";
+            this.Produkt_id.ReadOnly = true;
             // 
             // Bestellung_ID
             // 
@@ -111,38 +152,6 @@
             this.btnloeschen.Text = "löschen";
             this.btnloeschen.UseColumnTextForButtonValue = true;
             // 
-            // btnBestellen
-            // 
-            this.btnBestellen.Enabled = false;
-            this.btnBestellen.Location = new System.Drawing.Point(274, 371);
-            this.btnBestellen.Name = "btnBestellen";
-            this.btnBestellen.Size = new System.Drawing.Size(526, 23);
-            this.btnBestellen.TabIndex = 1;
-            this.btnBestellen.Text = "Bestellen";
-            this.btnBestellen.UseVisualStyleBackColor = true;
-            this.btnBestellen.Click += new System.EventHandler(this.btnBestellen_Click);
-            // 
-            // tbBerechnen
-            // 
-            this.tbBerechnen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbBerechnen.Location = new System.Drawing.Point(700, 294);
-            this.tbBerechnen.Name = "tbBerechnen";
-            this.tbBerechnen.ReadOnly = true;
-            this.tbBerechnen.Size = new System.Drawing.Size(100, 24);
-            this.tbBerechnen.TabIndex = 2;
-            this.tbBerechnen.TextChanged += new System.EventHandler(this.tbBerechnen_TextChanged);
-            // 
-            // btnBerechnen
-            // 
-            this.btnBerechnen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBerechnen.Location = new System.Drawing.Point(567, 295);
-            this.btnBerechnen.Name = "btnBerechnen";
-            this.btnBerechnen.Size = new System.Drawing.Size(94, 23);
-            this.btnBerechnen.TabIndex = 3;
-            this.btnBerechnen.Text = "Berechnen";
-            this.btnBerechnen.UseVisualStyleBackColor = true;
-            this.btnBerechnen.Click += new System.EventHandler(this.button1_Click);
-            // 
             // WarenKorb
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,6 +179,7 @@
         private System.Windows.Forms.Button btnBestellen;
         private System.Windows.Forms.TextBox tbBerechnen;
         private System.Windows.Forms.Button btnBerechnen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Produkt_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bestellung_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kunde_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bezeichnung;

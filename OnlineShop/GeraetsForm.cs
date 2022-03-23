@@ -58,49 +58,7 @@ namespace OnlineShop
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (countMenge.Value == 0)
-            {
-                MessageBox.Show("Bitte wählen Sie die Menge aus");
-                countMenge.BackColor = Color.Red;
-            }
-            else if(dgvGeraete.SelectedRows.Count == 0){
-
-                MessageBox.Show("Bitte ein Produkt auswählen", "", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading, "help.pdf");
-            }
-            else
-            {
-                countMenge.BackColor = Color.White;
-                double preis = Convert.ToDouble(dgvGeraete.SelectedRows[0].Cells[3].Value) ;
-                int menge = Convert.ToInt32(countMenge.Value);
-                tbSummePreis.Text = Convert.ToString(preis * menge);
-
-                string insert = "INSERT INTO onlineshop.kunde_produkte(Kunde_id,Produkte_id,Menge,preis,Datum)VALUES( @Kunde_id , @Produkte_id, @Menge ,@preis , now() ); ";
-
-
-
-                conn.Open();
-                MySqlCommand cmd = new MySqlCommand(insert, conn);
-
-                cmd.Parameters.Add("@Kunde_id", MySqlDbType.Int32, 100);
-                cmd.Parameters.Add("@Produkte_id", MySqlDbType.Int32, 100);
-                cmd.Parameters.Add("@Menge", MySqlDbType.Int32, 100);
-                cmd.Parameters.Add("@preis", MySqlDbType.Double);
-
-                cmd.Parameters["@Kunde_id"].Value = kundenid;
-                cmd.Parameters["@Produkte_id"].Value = dgvGeraete.SelectedRows[0].Cells[0].Value;
-                cmd.Parameters["@Menge"].Value = menge;
-                cmd.Parameters["@preis"].Value = preis * menge;
-
-                cmd.ExecuteNonQuery();
-
-
-                countMenge.Value = 0;
-
-
-                MessageBox.Show("Daten sind in Warenkorb hinzugefügt");
-                conn.Close();
-
-            }
+          
         }
 
         private void dgvGeraete_SelectionChanged(object sender, EventArgs e)
@@ -307,7 +265,7 @@ namespace OnlineShop
         private void btnBestellung_Click(object sender, EventArgs e)
         {
             this.Hide();
-            BestellungenK form = new BestellungenK();
+            BestellungenK form = new BestellungenK(kundenid);
             form.ShowDialog();
 
 
@@ -488,6 +446,54 @@ namespace OnlineShop
             else if (btnAbmelden.Width > 200)
             {
                 btnAbmelden.BackColor = Color.Pink;
+            }
+        }
+
+        private void btnSpeichern_Click(object sender, EventArgs e)
+        {
+            if (countMenge.Value == 0)
+            {
+                MessageBox.Show("Bitte wählen Sie die Menge aus");
+                countMenge.BackColor = Color.Red;
+            }
+            else if (dgvGeraete.SelectedRows.Count == 0)
+            {
+
+                MessageBox.Show("Bitte ein Produkt auswählen", "", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading, "help.pdf");
+            }
+            else
+            {
+                countMenge.BackColor = Color.White;
+                double preis = Convert.ToDouble(dgvGeraete.SelectedRows[0].Cells[3].Value);
+                int menge = Convert.ToInt32(countMenge.Value);
+                tbSummePreis.Text = Convert.ToString(preis * menge);
+
+                string insert = "INSERT INTO onlineshop.kunde_produkte(Kunde_id,Produkt_id,Menge,preis,Datum)VALUES( @Kunde_id , @Produkt_id, @Menge ,@preis , now() ); ";
+
+
+
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(insert, conn);
+
+                cmd.Parameters.Add("@Kunde_id", MySqlDbType.Int32, 100);
+                cmd.Parameters.Add("@Produkt_id", MySqlDbType.Int32, 100);
+                cmd.Parameters.Add("@Menge", MySqlDbType.Int32, 100);
+                cmd.Parameters.Add("@preis", MySqlDbType.Double);
+
+                cmd.Parameters["@Kunde_id"].Value = kundenid;
+                cmd.Parameters["@Produkt_id"].Value = dgvGeraete.SelectedRows[0].Cells[0].Value;
+                cmd.Parameters["@Menge"].Value = menge;
+                cmd.Parameters["@preis"].Value = preis * menge;
+
+                cmd.ExecuteNonQuery();
+
+
+                countMenge.Value = 0;
+
+
+                MessageBox.Show("Daten sind in Warenkorb hinzugefügt");
+                conn.Close();
+
             }
         }
     }

@@ -41,7 +41,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tbSummePreis = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSpeichern = new System.Windows.Forms.Button();
             this.tbSuche = new System.Windows.Forms.TextBox();
             this.btnAbmelden = new System.Windows.Forms.Button();
             this.btnBestellung = new System.Windows.Forms.Button();
@@ -186,16 +186,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnSpeichern
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(1198, 352);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(179, 29);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Speichern";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnSpeichern.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSpeichern.Location = new System.Drawing.Point(1198, 352);
+            this.btnSpeichern.Name = "btnSpeichern";
+            this.btnSpeichern.Size = new System.Drawing.Size(179, 29);
+            this.btnSpeichern.TabIndex = 18;
+            this.btnSpeichern.Text = "Speichern";
+            this.btnSpeichern.UseVisualStyleBackColor = true;
+            this.btnSpeichern.Click += new System.EventHandler(this.btnSpeichern_Click);
             // 
             // tbSuche
             // 
@@ -471,7 +471,7 @@
             this.Controls.Add(this.tbSuche);
             this.Controls.Add(this.sideBar);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSpeichern);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbSummePreis);
@@ -510,7 +510,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbSummePreis;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSpeichern;
         private System.Windows.Forms.TextBox tbSuche;
         private System.Windows.Forms.Button btnWarenkorb;
         private System.Windows.Forms.Button btnBestellung;

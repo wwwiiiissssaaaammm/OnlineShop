@@ -23,7 +23,9 @@ namespace OnlineShop
 
         public void FillDgv(string suchwert)
         {
-            MySqlCommand cmd = new MySqlCommand("select bs.Bestellung_ID, k.Kunde_ID, k.vorname, k.nachname, k.email, bs.Bezeichnung,  bs.Menge, bs.preis, bs.Datum, p.Foto from bestellung bs left join kunde k on bs.Kunde_id = k.Kunde_ID left join produkte p on bs.Kunde_id = k.Kunde_ID where bs.Bestellung_ID like '%"+tbSuche.Text+"%' or email like '%"+tbSuche.Text+"%' ; ", conn);
+            MySqlCommand cmd = new MySqlCommand(@"select bs.Bestellung_ID, k.Kunde_ID, k.vorname, k.nachname, k.email, bs.Bezeichnung,  bs.Menge, bs.preis, bs.Datum, p.Foto from bestellung bs
+ join kunde k on bs.Kunde_id = k.Kunde_ID
+ join produkte p on bs.Produkt_id = p.Produkt_id where Bestellung_ID like '%"+tbSuche.Text+"%' or email like '%"+tbSuche.Text+"%' ; ", conn);
 
             MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
 

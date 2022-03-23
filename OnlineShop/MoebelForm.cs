@@ -69,7 +69,7 @@ namespace OnlineShop
                 int menge = Convert.ToInt32(countMenge.Value);
                 tbSummePreis.Text = Convert.ToString(preis * menge);
 
-                string insert = "INSERT INTO onlineshop.kunde_produkte(Kunde_id,Produkte_id,Menge,preis,Datum)VALUES( @Kunde_id , @Produkte_id, @Menge ,@preis , now() ); ";
+                string insert = "INSERT INTO onlineshop.kunde_produkte(Kunde_id,Produkt_id,Menge,preis,Datum)VALUES( @Kunde_id , @Produkt_id, @Menge ,@preis , now() ); ";
 
 
 
@@ -77,12 +77,12 @@ namespace OnlineShop
                 MySqlCommand cmd = new MySqlCommand(insert, conn);
 
                 cmd.Parameters.Add("@Kunde_id", MySqlDbType.Int32, 100);
-                cmd.Parameters.Add("@Produkte_id", MySqlDbType.Int32, 100);
+                cmd.Parameters.Add("@Produkt_id", MySqlDbType.Int32, 100);
                 cmd.Parameters.Add("@Menge", MySqlDbType.Int32, 100);
                 cmd.Parameters.Add("@preis", MySqlDbType.Double);
 
                 cmd.Parameters["@Kunde_id"].Value = kundenid;
-                cmd.Parameters["@Produkte_id"].Value = dgvMoebel.SelectedRows[0].Cells[0].Value;
+                cmd.Parameters["@Produkt_id"].Value = dgvMoebel.SelectedRows[0].Cells[0].Value;
                 cmd.Parameters["@Menge"].Value = menge;
                 cmd.Parameters["@preis"].Value = preis * menge;
 
