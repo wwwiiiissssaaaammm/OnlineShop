@@ -114,24 +114,108 @@ namespace OnlineShop
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            sideBar.Size = new Size(234, 450);
-            dgvMoebel.Size = new Size(651, 363);
-            dgvMoebel.Location = new Point(238, 74);
-            lbSuche.Location = new Point(240, 44);
-            tbSuche.Size = new Size(588, 24);
-            tbSuche.Location = new Point(304, 44);
+            if (sideBar.Size.Width == 63)
+            {
+                sideBar.Size = new Size(234, 595);
+                this.sideBar.BackColor = Color.FromArgb(105, 105, 105, 100);
 
+                label6.Text = "Menu";
+                label6.ForeColor = Color.Black;
+                label6.BackColor = Color.Transparent;
+
+                btnMeineDaten.BackColor = Color.Pink;
+                btnMeineDaten.Width = 223;
+                btnMeineDaten.Text = "             Meine Daten";
+
+                tbstartseite.BackColor = Color.Pink;
+                tbstartseite.Width = 223;
+                tbstartseite.Text = "             Home";
+
+
+                tbGeraete.BackColor = Color.Pink;
+                tbGeraete.Width = 223;
+                tbGeraete.Text = "             Geräte";
+
+                tbMoebel.BackColor = Color.Pink;
+                tbMoebel.Width = 223;
+                tbMoebel.Text = "             Möbel";
+
+                tbKleidung.BackColor = Color.Pink;
+                tbKleidung.Width = 223;
+                tbKleidung.Text = "             Kleidung";
+
+                btnWarenkorb.BackColor = Color.Pink;
+                btnWarenkorb.Width = 223;
+                btnWarenkorb.Text = "             Warenkorb";
+
+                tbBestellung.BackColor = Color.Pink;
+                tbBestellung.Width = 223;
+                tbBestellung.Text = "             Meine Bestellungen";
+
+                tbAbmelden.BackColor = Color.Pink;
+                tbAbmelden.Width = 223;
+                tbAbmelden.Text = "             Abmelden";
+
+
+                dgvMoebel.Size = new Size(881, 460);
+                dgvMoebel.Location = new Point(240, 45);
+                tbSuche.Size = new Size(746, 24);
+                tbSuche.Location = new Point(306, 15);
+
+
+
+
+            }
+            else
+            {
+
+                sideBar.Size = new Size(63, 592);
+                sideBar.BackColor = Color.Transparent;
+                label6.Text = "";
+
+                btnMeineDaten.BackColor = Color.Gray;
+                btnMeineDaten.Text = "";
+                btnMeineDaten.Width = 60;
+
+                tbstartseite.BackColor = Color.Gray;
+                tbstartseite.Text = "";
+                tbstartseite.Width = 60;
+
+
+                tbGeraete.BackColor = Color.Gray;
+                tbGeraete.Text = "";
+                tbGeraete.Width = 60;
+
+                tbMoebel.BackColor = Color.Gray;
+                tbMoebel.Width = 60;
+                tbMoebel.Text = "";
+
+                tbKleidung.BackColor = Color.Gray;
+                tbKleidung.Width = 60;
+                tbKleidung.Text = "";
+
+                btnWarenkorb.BackColor = Color.Gray;
+                btnWarenkorb.Width = 60;
+                btnWarenkorb.Text = "";
+
+                tbBestellung.BackColor = Color.Gray;
+                tbBestellung.Width = 60;
+                tbBestellung.Text = "";
+
+                tbAbmelden.BackColor = Color.Gray;
+                tbAbmelden.Width = 60;
+                tbAbmelden.Text = "";
+
+                dgvMoebel.Size = new Size(966, 460);
+                dgvMoebel.Location = new Point(155, 45);
+                tbSuche.Size = new Size(746, 24);
+                tbSuche.Location = new Point(268, 15);
+
+
+            }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            sideBar.Size = new Size(72, 450);
-            dgvMoebel.Size = new Size(814, 363);
-            dgvMoebel.Location = new Point(78, 74);
-            lbSuche.Location = new Point(78, 44);
-            tbSuche.Size = new Size(750, 24);
-            tbSuche.Location = new Point(142, 44);
-        }
+        
 
         private void btnMeineDaten_Click(object sender, EventArgs e)
         {
@@ -192,6 +276,26 @@ namespace OnlineShop
             this.Hide();
             WarenKorb waren = new WarenKorb(kundenid);
             waren.ShowDialog();
+        }
+
+
+
+        private void btnDetail_Click_1(object sender, EventArgs e)
+        {
+            if (panel.Visible == true)
+            {
+                panel.Visible = false;
+                btnDetail.Text = "Show more Details";
+                btnDetail.Location = new Point(1147, 144);
+
+            }
+            else if (panel.Visible == false)
+            {
+                panel.Visible = true;
+                btnDetail.Text = "Show less Details";
+                btnDetail.Location = new Point(1154, 251);
+
+            }
         }
     }
 }

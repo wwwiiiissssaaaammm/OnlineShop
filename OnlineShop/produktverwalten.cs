@@ -12,12 +12,12 @@ using MySql.Data.MySqlClient;
 
 namespace OnlineShop
 {
-    public partial class AdminForm : Form
+    public partial class produkteverwalten : Form
     {
         MySqlConnection conn = new MySqlConnection("SERVER=localhost; UID=root; Database=OnlineShop; PASSWORD='';");
         Datenbank db = new Datenbank();
         List<Kategorie> lsKategorie;
-        public AdminForm()
+        public produkteverwalten()
 
         {
             InitializeComponent();
@@ -111,7 +111,7 @@ namespace OnlineShop
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Daten sind hinzugefügt");
                 this.Hide();
-                AdminForm form = new AdminForm();
+                produkteverwalten form = new produkteverwalten();
                 form.ShowDialog();
 
                 conn.Close();
@@ -165,7 +165,7 @@ namespace OnlineShop
                 delete = "delete from produkte where Produkt_id = '" + tbID.Text + "';";
                 excutequery(delete);
                 this.Hide();
-                AdminForm form = new AdminForm();
+                produkteverwalten form = new produkteverwalten();
                 form.ShowDialog();
             }
         }
@@ -216,7 +216,7 @@ namespace OnlineShop
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Daten sind bearbeitet");
                 this.Hide();
-                AdminForm form = new AdminForm();
+                produkteverwalten form = new produkteverwalten();
                 form.ShowDialog();
 
                 conn.Close();
@@ -237,6 +237,34 @@ namespace OnlineShop
         {
             Filldgv(tbSuche.Text);
 
+        }
+
+        private void pbzuruck_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminStartSeite adminStartSeite = new AdminStartSeite();
+            adminStartSeite.ShowDialog();
+        }
+
+        private void btnKundenDaten_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            kundenDatenA kundenDatenA = new kundenDatenA();
+            kundenDatenA.ShowDialog();
+        }
+
+        private void btnBestellungen_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Bestellungen bestellungen = new Bestellungen();
+            bestellungen.ShowDialog();
+        }
+
+        private void btnAbmelden_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
         }
     }
 }

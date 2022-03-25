@@ -39,13 +39,13 @@
             this.dgvBestellungen.Location = new System.Drawing.Point(13, 13);
             this.dgvBestellungen.Name = "dgvBestellungen";
             this.dgvBestellungen.ReadOnly = true;
-            this.dgvBestellungen.Size = new System.Drawing.Size(1062, 452);
+            this.dgvBestellungen.Size = new System.Drawing.Size(1400, 531);
             this.dgvBestellungen.TabIndex = 0;
             // 
             // btnzuruck
             // 
             this.btnzuruck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnzuruck.Location = new System.Drawing.Point(13, 484);
+            this.btnzuruck.Location = new System.Drawing.Point(618, 550);
             this.btnzuruck.Name = "btnzuruck";
             this.btnzuruck.Size = new System.Drawing.Size(177, 32);
             this.btnzuruck.TabIndex = 52;
@@ -57,6 +57,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::OnlineShop.Properties.Resources._230_2301638_lilac;
             this.ClientSize = new System.Drawing.Size(1425, 594);
             this.Controls.Add(this.btnzuruck);
             this.Controls.Add(this.dgvBestellungen);

@@ -74,8 +74,11 @@
             this.dgvKleidung.AllowUserToDeleteRows = false;
             this.dgvKleidung.AllowUserToResizeColumns = false;
             this.dgvKleidung.AllowUserToResizeRows = false;
+            this.dgvKleidung.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvKleidung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKleidung.Location = new System.Drawing.Point(155, 45);
+            this.dgvKleidung.MaximumSize = new System.Drawing.Size(966, 460);
+            this.dgvKleidung.MinimumSize = new System.Drawing.Size(805, 372);
             this.dgvKleidung.Name = "dgvKleidung";
             this.dgvKleidung.ReadOnly = true;
             this.dgvKleidung.Size = new System.Drawing.Size(966, 460);
@@ -230,7 +233,7 @@
             this.tbAbmelden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tbAbmelden.Image = ((System.Drawing.Image)(resources.GetObject("tbAbmelden.Image")));
             this.tbAbmelden.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbAbmelden.Location = new System.Drawing.Point(3, 433);
+            this.tbAbmelden.Location = new System.Drawing.Point(3, 447);
             this.tbAbmelden.Name = "tbAbmelden";
             this.tbAbmelden.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.tbAbmelden.Size = new System.Drawing.Size(60, 30);
@@ -333,6 +336,7 @@
             this.panel.Size = new System.Drawing.Size(303, 110);
             this.panel.TabIndex = 57;
             this.panel.Visible = false;
+            this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Paint);
             // 
             // label1
             // 
@@ -402,6 +406,7 @@
             this.label5.Size = new System.Drawing.Size(98, 18);
             this.label5.TabIndex = 54;
             this.label5.Text = "Summe Preis";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // button2
             // 
@@ -424,6 +429,7 @@
             this.label3.Size = new System.Drawing.Size(53, 18);
             this.label3.TabIndex = 51;
             this.label3.Text = "Menge";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // button6
             // 
@@ -444,6 +450,7 @@
             this.tbSummePreis.ReadOnly = true;
             this.tbSummePreis.Size = new System.Drawing.Size(145, 24);
             this.tbSummePreis.TabIndex = 53;
+            this.tbSummePreis.TextChanged += new System.EventHandler(this.tbSummePreis_TextChanged);
             // 
             // countMenge
             // 
@@ -451,6 +458,7 @@
             this.countMenge.Name = "countMenge";
             this.countMenge.Size = new System.Drawing.Size(145, 20);
             this.countMenge.TabIndex = 52;
+            this.countMenge.ValueChanged += new System.EventHandler(this.countMenge_ValueChanged);
             // 
             // btnzuruck
             // 

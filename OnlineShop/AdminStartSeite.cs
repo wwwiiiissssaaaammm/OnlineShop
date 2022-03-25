@@ -21,7 +21,7 @@ namespace OnlineShop
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AdminForm adminForm = new AdminForm();  
+            produkteverwalten adminForm = new produkteverwalten();  
             adminForm.ShowDialog();
         }
 
@@ -37,6 +37,24 @@ namespace OnlineShop
             this.Hide();
             Bestellungen bestellungen = new Bestellungen();
             bestellungen.ShowDialog();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult dr;
+            dr = MessageBox.Show("Möchten Sie wirklich abmelden", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+
+                this.Hide();
+                LoginForm form = new LoginForm();
+                form.ShowDialog();
+            }
         }
     }
 }

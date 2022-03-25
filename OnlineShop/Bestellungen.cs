@@ -63,9 +63,33 @@ namespace OnlineShop
             tbBerechnen.Text = sum.ToString();
         }
 
-        private void tbBerechnen_TextChanged(object sender, EventArgs e)
+        private void pbzuruck_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            AdminStartSeite adminStartSeite = new AdminStartSeite();
+            adminStartSeite.ShowDialog();
+        }
 
+        private void btnKundenDaten_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            kundenDatenA kundenDatenA = new kundenDatenA();
+            kundenDatenA.ShowDialog();
+        }
+
+        private void btnProdukteVerwalten_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            produkteverwalten p = new produkteverwalten();
+            p.ShowDialog();
+
+        }
+
+        private void btnAbmelden_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
         }
     }
 }

@@ -133,5 +133,33 @@ namespace OnlineShop
                 kunden.ShowDialog();
             }
         }
+
+        private void pbzuruck_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminStartSeite adminStartSeite = new AdminStartSeite();
+            adminStartSeite.ShowDialog();
+        }
+
+        private void btnBestellungen_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Bestellungen bestellungen = new Bestellungen();
+            bestellungen.ShowDialog();
+        }
+
+        private void btnProdukteVerwalten_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            produkteverwalten p = new produkteverwalten();
+            p.ShowDialog();
+        }
+
+        private void btnAbmelden_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
+        }
     }
 }

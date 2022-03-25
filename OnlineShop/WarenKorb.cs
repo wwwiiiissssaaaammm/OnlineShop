@@ -116,5 +116,12 @@ where kp.Kunde_id = "+Kundenid, conn);
         {
 
         }
+
+        private void btnzuruck_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StartSeiteK s = new StartSeiteK(Kundenid);
+            s.ShowDialog();
+        }
     }
 }

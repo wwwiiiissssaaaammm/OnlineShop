@@ -89,11 +89,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminForm.cs">
+    <Compile Include="produktverwalten.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForm.Designer.cs">
-      <DependentUpon>AdminForm.cs</DependentUpon>
+    <Compile Include="produktverwalten.Designer.cs">
+      <DependentUpon>produktverwalten.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminStartSeite.cs">
       <SubType>Form</SubType>
@@ -171,8 +171,8 @@
     <Compile Include="WarenKorb.Designer.cs">
       <DependentUpon>WarenKorb.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminForm.resx">
-      <DependentUpon>AdminForm.cs</DependentUpon>
+    <EmbeddedResource Include="produktverwalten.resx">
+      <DependentUpon>produktverwalten.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminStartSeite.resx">
       <DependentUpon>AdminStartSeite.cs</DependentUpon>
