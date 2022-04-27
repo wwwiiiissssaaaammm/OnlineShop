@@ -296,6 +296,7 @@
             this.dgvAlleProdukte.Name = "dgvAlleProdukte";
             this.dgvAlleProdukte.Size = new System.Drawing.Size(1335, 487);
             this.dgvAlleProdukte.TabIndex = 2;
+            this.dgvAlleProdukte.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlleProdukte_CellContentClick);
             // 
             // tbSuche
             // 
@@ -333,7 +334,7 @@
             this.MaximizeBox = false;
             this.Name = "StartSeiteK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Home";
             this.sideBar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

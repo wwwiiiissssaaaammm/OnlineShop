@@ -25,8 +25,8 @@ namespace OnlineShop
 
         public void fillDgv()
         {
-            MySqlDataAdapter adapter = new MySqlDataAdapter(@"select kp.Produkt_id,kp.Bestellung_ID, k.Kunde_ID, p.Bezeichnung, kp.Menge, kp.preis, kp.Datum from Kunde_Produkte kp 
-left join produkte p on kp.Produkt_id = p.Produkt_id 
+            MySqlDataAdapter adapter = new MySqlDataAdapter(@"select kp.Produkte_id,kp.Bestellung_ID, k.Kunde_ID, p.Bezeichnung, kp.Menge, kp.preis, kp.Datum from Kunde_Produkte kp 
+left join produkte p on kp.Produkte_id = p.Produkt_id 
 left join kunde k on kp.Kunde_id = k.Kunde_ID 
 where kp.Kunde_id = "+Kundenid, conn);
             DataTable tbl = new DataTable();

@@ -468,7 +468,7 @@ namespace OnlineShop
                 int menge = Convert.ToInt32(countMenge.Value);
                 tbSummePreis.Text = Convert.ToString(preis * menge);
 
-                string insert = "INSERT INTO onlineshop.kunde_produkte(Kunde_id,Produkt_id,Menge,preis,Datum)VALUES( @Kunde_id , @Produkt_id, @Menge ,@preis , now() ); ";
+                string insert = "INSERT INTO onlineshop.kunde_produkte(Kunde_id,Produkte_id,Menge,preis,Datum)VALUES( @Kunde_id , @Produkt_id, @Menge ,@preis , now() ); ";
 
 
 

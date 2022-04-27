@@ -185,7 +185,7 @@
             this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Login ";
             this.loginPan.ResumeLayout(false);
             this.loginPan.PerformLayout();
             this.ResumeLayout(false);

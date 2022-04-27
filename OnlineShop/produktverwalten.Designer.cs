@@ -33,6 +33,10 @@
             this.tbSuche = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnKundenDaten = new System.Windows.Forms.Button();
+            this.btnProdukteVerwalten = new System.Windows.Forms.Button();
+            this.btnBestellungen = new System.Windows.Forms.Button();
+            this.pbzuruck = new System.Windows.Forms.PictureBox();
             this.btnAbmelden = new System.Windows.Forms.Button();
             this.btn_Datenleeren = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -49,11 +53,7 @@
             this.tbBeschreibung = new System.Windows.Forms.TextBox();
             this.tb_ProduktName = new System.Windows.Forms.TextBox();
             this.btn_hinzufuegen = new System.Windows.Forms.Button();
-            this.pbzuruck = new System.Windows.Forms.PictureBox();
             this.picBild = new System.Windows.Forms.PictureBox();
-            this.btnKundenDaten = new System.Windows.Forms.Button();
-            this.btnProdukteVerwalten = new System.Windows.Forms.Button();
-            this.btnBestellungen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdukte)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbzuruck)).BeginInit();
@@ -72,6 +72,7 @@
             this.dgvProdukte.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProdukte.Size = new System.Drawing.Size(905, 470);
             this.dgvProdukte.TabIndex = 0;
+            this.dgvProdukte.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdukte_CellContentClick);
             this.dgvProdukte.SelectionChanged += new System.EventHandler(this.dgvProdukte_SelectionChanged);
             // 
             // tbSuche
@@ -106,6 +107,58 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1425, 46);
             this.panel1.TabIndex = 23;
+            // 
+            // btnKundenDaten
+            // 
+            this.btnKundenDaten.BackColor = System.Drawing.Color.Navy;
+            this.btnKundenDaten.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnKundenDaten.Font = new System.Drawing.Font("MingLiU-ExtB", 12F, System.Drawing.FontStyle.Bold);
+            this.btnKundenDaten.ForeColor = System.Drawing.Color.White;
+            this.btnKundenDaten.Location = new System.Drawing.Point(822, 6);
+            this.btnKundenDaten.Name = "btnKundenDaten";
+            this.btnKundenDaten.Size = new System.Drawing.Size(216, 31);
+            this.btnKundenDaten.TabIndex = 44;
+            this.btnKundenDaten.Text = "Kunden Daten";
+            this.btnKundenDaten.UseVisualStyleBackColor = false;
+            this.btnKundenDaten.Click += new System.EventHandler(this.btnKundenDaten_Click);
+            // 
+            // btnProdukteVerwalten
+            // 
+            this.btnProdukteVerwalten.BackColor = System.Drawing.Color.Navy;
+            this.btnProdukteVerwalten.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProdukteVerwalten.Font = new System.Drawing.Font("MingLiU-ExtB", 12F, System.Drawing.FontStyle.Bold);
+            this.btnProdukteVerwalten.ForeColor = System.Drawing.Color.White;
+            this.btnProdukteVerwalten.Location = new System.Drawing.Point(304, 7);
+            this.btnProdukteVerwalten.Name = "btnProdukteVerwalten";
+            this.btnProdukteVerwalten.Size = new System.Drawing.Size(239, 31);
+            this.btnProdukteVerwalten.TabIndex = 43;
+            this.btnProdukteVerwalten.Text = "Produkte Verwaltung";
+            this.btnProdukteVerwalten.UseVisualStyleBackColor = false;
+            // 
+            // btnBestellungen
+            // 
+            this.btnBestellungen.BackColor = System.Drawing.Color.Navy;
+            this.btnBestellungen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBestellungen.Font = new System.Drawing.Font("MingLiU-ExtB", 12F, System.Drawing.FontStyle.Bold);
+            this.btnBestellungen.ForeColor = System.Drawing.Color.White;
+            this.btnBestellungen.Location = new System.Drawing.Point(581, 7);
+            this.btnBestellungen.Name = "btnBestellungen";
+            this.btnBestellungen.Size = new System.Drawing.Size(192, 31);
+            this.btnBestellungen.TabIndex = 42;
+            this.btnBestellungen.Text = "Bestellungen";
+            this.btnBestellungen.UseVisualStyleBackColor = false;
+            this.btnBestellungen.Click += new System.EventHandler(this.btnBestellungen_Click);
+            // 
+            // pbzuruck
+            // 
+            this.pbzuruck.Image = ((System.Drawing.Image)(resources.GetObject("pbzuruck.Image")));
+            this.pbzuruck.Location = new System.Drawing.Point(3, 6);
+            this.pbzuruck.Name = "pbzuruck";
+            this.pbzuruck.Size = new System.Drawing.Size(40, 37);
+            this.pbzuruck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbzuruck.TabIndex = 41;
+            this.pbzuruck.TabStop = false;
+            this.pbzuruck.Click += new System.EventHandler(this.pbzuruck_Click);
             // 
             // btnAbmelden
             // 
@@ -281,17 +334,6 @@
             this.btn_hinzufuegen.UseVisualStyleBackColor = false;
             this.btn_hinzufuegen.Click += new System.EventHandler(this.btn_hinzufuegen_Click);
             // 
-            // pbzuruck
-            // 
-            this.pbzuruck.Image = ((System.Drawing.Image)(resources.GetObject("pbzuruck.Image")));
-            this.pbzuruck.Location = new System.Drawing.Point(3, 6);
-            this.pbzuruck.Name = "pbzuruck";
-            this.pbzuruck.Size = new System.Drawing.Size(40, 37);
-            this.pbzuruck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbzuruck.TabIndex = 41;
-            this.pbzuruck.TabStop = false;
-            this.pbzuruck.Click += new System.EventHandler(this.pbzuruck_Click);
-            // 
             // picBild
             // 
             this.picBild.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -301,47 +343,6 @@
             this.picBild.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBild.TabIndex = 29;
             this.picBild.TabStop = false;
-            // 
-            // btnKundenDaten
-            // 
-            this.btnKundenDaten.BackColor = System.Drawing.Color.Navy;
-            this.btnKundenDaten.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnKundenDaten.Font = new System.Drawing.Font("MingLiU-ExtB", 12F, System.Drawing.FontStyle.Bold);
-            this.btnKundenDaten.ForeColor = System.Drawing.Color.White;
-            this.btnKundenDaten.Location = new System.Drawing.Point(822, 6);
-            this.btnKundenDaten.Name = "btnKundenDaten";
-            this.btnKundenDaten.Size = new System.Drawing.Size(216, 31);
-            this.btnKundenDaten.TabIndex = 44;
-            this.btnKundenDaten.Text = "Kunden Daten";
-            this.btnKundenDaten.UseVisualStyleBackColor = false;
-            this.btnKundenDaten.Click += new System.EventHandler(this.btnKundenDaten_Click);
-            // 
-            // btnProdukteVerwalten
-            // 
-            this.btnProdukteVerwalten.BackColor = System.Drawing.Color.Navy;
-            this.btnProdukteVerwalten.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProdukteVerwalten.Font = new System.Drawing.Font("MingLiU-ExtB", 12F, System.Drawing.FontStyle.Bold);
-            this.btnProdukteVerwalten.ForeColor = System.Drawing.Color.White;
-            this.btnProdukteVerwalten.Location = new System.Drawing.Point(304, 7);
-            this.btnProdukteVerwalten.Name = "btnProdukteVerwalten";
-            this.btnProdukteVerwalten.Size = new System.Drawing.Size(239, 31);
-            this.btnProdukteVerwalten.TabIndex = 43;
-            this.btnProdukteVerwalten.Text = "Produkte Verwaltung";
-            this.btnProdukteVerwalten.UseVisualStyleBackColor = false;
-            // 
-            // btnBestellungen
-            // 
-            this.btnBestellungen.BackColor = System.Drawing.Color.Navy;
-            this.btnBestellungen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBestellungen.Font = new System.Drawing.Font("MingLiU-ExtB", 12F, System.Drawing.FontStyle.Bold);
-            this.btnBestellungen.ForeColor = System.Drawing.Color.White;
-            this.btnBestellungen.Location = new System.Drawing.Point(581, 7);
-            this.btnBestellungen.Name = "btnBestellungen";
-            this.btnBestellungen.Size = new System.Drawing.Size(192, 31);
-            this.btnBestellungen.TabIndex = 42;
-            this.btnBestellungen.Text = "Bestellungen";
-            this.btnBestellungen.UseVisualStyleBackColor = false;
-            this.btnBestellungen.Click += new System.EventHandler(this.btnBestellungen_Click);
             // 
             // produkteverwalten
             // 

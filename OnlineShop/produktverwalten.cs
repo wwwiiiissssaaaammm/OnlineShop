@@ -266,5 +266,10 @@ namespace OnlineShop
             LoginForm loginForm = new LoginForm();
             loginForm.ShowDialog();
         }
+
+        private void dgvProdukte_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

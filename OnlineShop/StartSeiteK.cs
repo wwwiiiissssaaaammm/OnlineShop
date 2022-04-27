@@ -393,6 +393,11 @@ namespace OnlineShop
             BestellungenK form = new BestellungenK(kundenid);
             form.ShowDialog();
         }
+
+        private void dgvAlleProdukte_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 
 
